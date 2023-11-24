@@ -1,5 +1,5 @@
 {
-  "name": "common-packages",
+  "name": "dd-common-packages",
   "version": "1.0.0",
   "description": "",
   "main": "lib/bundle.cjs.js",
