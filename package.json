@@ -31,10 +31,10 @@
     "rollup": "^4.3.0",
     "rollup-plugin-copy": "^3.5.0",
     "tslib": "^2.6.2",
-    "typescript": "*",
-    "vue": "^3.3.8"
+    "typescript": "*"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vue": "^3.3.8"
   }
 }
