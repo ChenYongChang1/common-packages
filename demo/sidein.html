@@ -33,9 +33,10 @@
 
     <!-- 引入 Vue 3 核心库 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
-    <script src="../lib/bundle.browser.js"></script>
+    <!-- <script src="../lib/bundle.browser.js"></script> -->
 
-    <script>
+    <script type="module">
+      import { directives } from "../lib/bundle.esm.js";
       // 创建一个简单的 Vue 应用
       const app = Vue.createApp({
         data() {
@@ -44,7 +45,7 @@
           };
         },
       });
-      app.use(DdCommonPackages.directives.domSideIn);
+      app.use(directives.domSideIn);
 
       // 挂载应用
       app.mount("#app");

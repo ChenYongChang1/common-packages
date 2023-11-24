@@ -1,0 +1,7 @@
+{
+  "root": "demo",
+  "cors": true,
+  "headers": {
+    "Access-Control-Allow-Origin": "*"
+  }
+}
