@@ -36,7 +36,7 @@
     <!-- <script src="../lib/bundle.browser.js"></script> -->
 
     <script type="module">
-      import { directives } from "../lib/bundle.esm.js";
+      import { directives, date } from "../lib/bundle.esm.js";
       // 创建一个简单的 Vue 应用
       const app = Vue.createApp({
         data() {
@@ -46,7 +46,8 @@
         },
       });
       app.use(directives.domSideIn);
-
+      console.log(date.timeToString(1700813101228, "YYYY-MM-DD hh:mm:s"));
+      console.log(date.distance(1700813101228, 1700893101228, ["MM月DD日"]));
       // 挂载应用
       app.mount("#app");
     </script>
