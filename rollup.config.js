@@ -1,6 +1,9 @@
 const babel = require("@rollup/plugin-babel");
 const fs = require("fs-extra");
 // const copy = require("rollup-plugin-copy");
+const resolve = require("rollup-plugin-node-resolve");
+const commonjs = require("rollup-plugin-commonjs");
+
 const typescript = require("@rollup/plugin-typescript"); // 让 rollup 认识 ts 的代码
 const pkg = require("./package.json");
 
@@ -26,6 +29,8 @@ module.exports = {
     exclude: "node_modules/**",
   },
   plugins: [
+    resolve(),
+    commonjs(),
     typescript(),
     babel({
       babelHelpers: "bundled",

@@ -1,5 +1,5 @@
 import { timeToString, formatTimestamp, distance } from "./format/index";
-// import { d } from './difference/index'
+export { timeToString, formatTimestamp, distance } from "./format/index";
 
 export const date = {
   timeToString,

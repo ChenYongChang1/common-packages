@@ -1,4 +1,4 @@
-import { Directive } from "vue";
+import { App, Directive } from "vue";
 
 /**
   @param distance?: number; // 上移距离
@@ -31,7 +31,7 @@ const isBeforeOutView = (el: HTMLElement, distance: number) => {
   return rect.top - distance > window.innerHeight;
 };
 
-export const domSideIn: Directive<any, IDirectiveOption> = {
+export const _domSideIn: Directive<any, IDirectiveOption> = {
   mounted(el: HTMLElement, binding, vnode) {
     const { distance = 100, start, end, opt } = binding.value || {};
     if (!isBeforeOutView(el, distance)) {
@@ -62,5 +62,11 @@ export const domSideIn: Directive<any, IDirectiveOption> = {
   },
   unmounted(el: HTMLElement) {
     ob.unobserve(el);
+  },
+};
+
+export const domSideIn = {
+  install(app: App) {
+    app.directive("side-in", _domSideIn);
   },
 };
