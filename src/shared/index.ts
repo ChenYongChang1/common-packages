@@ -1,5 +1,7 @@
-import { cloneDeep } from "./deepclone/index";
-export { cloneDeep as deepClone } from "./deepclone/index";
+import { cloneDeep, debounce, throttle } from "./lodash/index";
+export { cloneDeep as deepClone, debounce, throttle };
 export const shared = {
   deepClone: cloneDeep,
+  debounce,
+  throttle,
 };
