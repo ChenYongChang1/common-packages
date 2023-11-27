@@ -42,7 +42,7 @@
     <!-- <script src="../lib/bundle.browser.js"></script> -->
     <script src="../lib/bundle.browser.js"></script>
     <script type="module">
-      const { timeToString, domSideIn, date, directives, getRandomColor } =
+      const { timeToString, domSideIn, date, directives, getRandomColor, tdk } =
         DdCommonPackages;
       // 创建一个简单的 Vue 应用
       const app = Vue.createApp({
@@ -55,11 +55,9 @@
       });
 
       app.use(domSideIn);
-      console.log(
-        getRandomColor,
-        timeToString(1700813101228, "YYYY-MM-DD hh:mm:s")
-      );
+      console.log(timeToString(1700813101228, "YYYY-MM-DD hh:mm:s"));
       console.log(date.distance(1700813101228, 1700893101228, ["MM月DD日"]));
+      tdk("side in 页面", "描述吧", "这是关键词");
       // 挂载应用
       app.mount("#app");
     </script>
