@@ -25,7 +25,13 @@
     <div id="app">
       <!-- 这里是你的 Vue 应用内容 -->
       <div class="container">
-        <div v-for="(item) in list" v-side-in :key="item" class="item">
+        <div
+          v-for="(item) in list"
+          v-side-in
+          :key="item"
+          class="item"
+          :style="{background: getRandomColor()}"
+        >
           {{item}}
         </div>
       </div>
@@ -36,18 +42,23 @@
     <!-- <script src="../lib/bundle.browser.js"></script> -->
     <script src="../lib/bundle.browser.js"></script>
     <script type="module">
-      const { timeToString, domSideIn, date, directives } = DdCommonPackages;
+      const { timeToString, domSideIn, date, directives, getRandomColor } =
+        DdCommonPackages;
       // 创建一个简单的 Vue 应用
       const app = Vue.createApp({
         data() {
           return {
+            getRandomColor,
             list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
           };
         },
       });
 
       app.use(domSideIn);
-      console.log(timeToString(1700813101228, "YYYY-MM-DD hh:mm:s"));
+      console.log(
+        getRandomColor,
+        timeToString(1700813101228, "YYYY-MM-DD hh:mm:s")
+      );
       console.log(date.distance(1700813101228, 1700893101228, ["MM月DD日"]));
       // 挂载应用
       app.mount("#app");

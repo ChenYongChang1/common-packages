@@ -1,7 +1,17 @@
 import { cloneDeep, debounce, throttle } from "./lodash/index";
-export { cloneDeep as deepClone, debounce, throttle };
+import { getRandomStr, getRandomColor } from "./random/index";
+
+export {
+  cloneDeep as deepClone,
+  debounce,
+  throttle,
+  getRandomStr,
+  getRandomColor,
+};
 export const shared = {
   deepClone: cloneDeep,
   debounce,
   throttle,
+  getRandomStr,
+  getRandomColor,
 };
