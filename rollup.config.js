@@ -8,7 +8,16 @@ const typescript = require("@rollup/plugin-typescript"); // 让 rollup 认识 ts
 const pkg = require("./package.json");
 const serve = require("rollup-plugin-serve");
 const livereload = require("rollup-plugin-livereload");
-
+const isDev = process.env.npm_lifecycle_event === "dev";
+const httpServer = isDev
+  ? [
+      serve({
+        contentBase: "", //服务器启动的文件夹，默认是项目根目录，需要在该文件下创建index.html
+        port: 8080, //端口号，默认10001
+      }),
+      livereload("lib"),
+    ]
+  : [];
 module.exports = {
   input: "./src/index.ts",
   output: [
@@ -23,6 +32,9 @@ module.exports = {
     {
       file: pkg.browser,
       name: "DdCommonPackages",
+      globals: {
+        vue: "vue",
+      },
       format: "umd",
     },
   ],
@@ -31,11 +43,7 @@ module.exports = {
     exclude: "node_modules/**",
   },
   plugins: [
-    serve({
-      contentBase: "", //服务器启动的文件夹，默认是项目根目录，需要在该文件下创建index.html
-      port: 8080, //端口号，默认10001
-    }),
-    livereload("lib"),
+    ...httpServer,
     resolve(),
     commonjs(),
     typescript(),
