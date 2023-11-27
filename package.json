@@ -7,7 +7,7 @@
   "browser": "lib/bundle.browser.js",
   "types": "lib/types/index.d.ts",
   "scripts": {
-    "dev": "rollup -c -w & http-server --config http-server.json",
+    "dev": "rollup -c -w",
     "build": "rollup -c",
     "build:types": "tsc"
   },
@@ -28,11 +28,12 @@
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "eslint": "^8.53.0",
     "fs-extra": "^11.1.1",
-    "http-server": "^14.1.1",
     "rollup": "^4.3.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^2.0.2",
     "tslib": "^2.6.2",
     "typescript": "*"
   },

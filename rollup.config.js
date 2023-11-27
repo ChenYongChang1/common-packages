@@ -6,6 +6,8 @@ const commonjs = require("rollup-plugin-commonjs");
 
 const typescript = require("@rollup/plugin-typescript"); // 让 rollup 认识 ts 的代码
 const pkg = require("./package.json");
+const serve = require("rollup-plugin-serve");
+const livereload = require("rollup-plugin-livereload");
 
 module.exports = {
   input: "./src/index.ts",
@@ -29,6 +31,11 @@ module.exports = {
     exclude: "node_modules/**",
   },
   plugins: [
+    serve({
+      contentBase: "", //服务器启动的文件夹，默认是项目根目录，需要在该文件下创建index.html
+      port: 8080, //端口号，默认10001
+    }),
+    livereload("lib"),
     resolve(),
     commonjs(),
     typescript(),
