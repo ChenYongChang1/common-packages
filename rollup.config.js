@@ -8,6 +8,7 @@ const typescript = require("@rollup/plugin-typescript"); // 让 rollup 认识 ts
 const pkg = require("./package.json");
 const serve = require("rollup-plugin-serve");
 const livereload = require("rollup-plugin-livereload");
+const { terser } = require("rollup-plugin-terser");
 const isDev = process.env.npm_lifecycle_event === "dev";
 const httpServer = isDev
   ? [
@@ -44,6 +45,7 @@ module.exports = {
   },
   plugins: [
     ...httpServer,
+    terser(),
     resolve(),
     commonjs(),
     typescript(),
