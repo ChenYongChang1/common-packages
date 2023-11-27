@@ -1,5 +1,6 @@
 import { shared } from "../../shared/index";
-import { ComputedRef, WritableComputedRef, computed, toRaw } from "vue";
+import { ComputedRef, WritableComputedRef } from "vue";
+import { computed, toRaw } from "vue";
 
 export interface FunctionInterface {
   (...args: any[]): any;
