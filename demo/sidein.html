@@ -34,6 +34,7 @@
         >
           {{item}}
         </div>
+        <div @click="list.push(getRandomColor())" class="ref-dom">add</div>
       </div>
     </div>
 
@@ -52,6 +53,7 @@
             list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
           };
         },
+        mounted() {},
       });
 
       app.use(domSideIn);

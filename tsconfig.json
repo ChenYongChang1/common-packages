@@ -25,6 +25,6 @@
     "emitDeclarationOnly": true
   },
   // 只编译 src 目录下的文件
-  "include": ["src"],
+  "include": ["src", "src/**/*.d.ts"],
   "exclude": ["test"]
 }
