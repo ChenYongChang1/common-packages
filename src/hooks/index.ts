@@ -1,6 +1,8 @@
 import { usePropsHook } from "./props/index";
-export { usePropsHook };
+import { debounceRef } from "./ref/index";
+export { usePropsHook, debounceRef };
 
 export const hooks = {
   usePropsHook,
+  debounceRef,
 };

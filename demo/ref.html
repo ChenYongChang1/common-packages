@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 3 Side in</title>
+    <style>
+      .container {
+        width: 500px;
+        margin: auto;
+      }
+      .container .item {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+        border: solid 1px #f3f3f3;
+        background: #f3f3f3;
+      }
+      .container .item:nth-child(2n) {
+        background: #3e3e3e;
+      }
+      .box {
+        width: 500px;
+        position: relative;
+        z-index: 999;
+      }
+      .common {
+        width: 80%;
+        height: 300px;
+        border: solid 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 这里是你的 Vue 应用内容 -->
+      <div><input type="text" v-model="kk" /></div>
+      <div>-- {{kk}} --</div>
+      <div class="container">
+        <div v-for="(item) in list" v-side-in :key="item" class="item">
+          {{item}}
+        </div>
+        <div @click="list.push(getRandomColor())" class="ref-dom">add</div>
+      </div>
+    </div>
+    <script>
+      window.process = { env: { NODE_ENV: "production" } };
+    </script>
+    <!-- 引入 Vue 3 核心库 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <!-- <script src="../lib/bundle.browser.js"></script> -->
+    <script src="../lib/bundle.browser.js"></script>
+    <script type="module">
+      const { debounceRef } = DdCommonPackages;
+      console.log(DdCommonPackages.debounceRef, "DdCommonPackages");
+      // 创建一个简单的 Vue 应用
+      const app = Vue.createApp({
+        setup() {
+          const kk = debounceRef("dddd", 1000);
+          console.log(kk, "kk");
+          return {
+            kk,
+            list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          };
+        },
+
+        mounted() {},
+        methods: {},
+      });
+
+      // 挂载应用
+      app.mount("#app");
+    </script>
+  </body>
+</html>
