@@ -24,5 +24,16 @@
 5. tdk
 
 6. 浏览器相关
+
    1. addListener `addEventListener 当页面卸载会自动 移除监听`
    2. mutationObserver `mutationObserver 直接dom.mutationObserver 会监听dom变化`
+
+      1. 第一个参数是回调
+
+      2. 第二个参数是配置项 `{ attributes: true, childList: true, subtree: true } ` 默认 `{  subtree: false,childList: true,  attributes: false,  }`
+
+         - attributes：一个布尔值，表示是否观察目标节点或其子节点中属性的变化。如果为 true，则当目标节点或其子节点中的属性发生变化时，MutationObserver 对象将会被通知。
+
+         - childList：一个布尔值，表示是否观察目标节点的子节点的变化。如果为 true，则当目标节点的子节点列表发生变化时（如添加、删除或移动子节点），MutationObserver 对象将会被通知。
+
+         - subtree：一个布尔值，表示是否观察目标节点的所有后代节点（即包括它的子节点、孙子节点、曾孙节点等）。如果为 true，则当目标节点及其后代节点的任何变化发生时，MutationObserver 对象将会被通知。

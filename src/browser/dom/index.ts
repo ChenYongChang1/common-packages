@@ -26,6 +26,7 @@ function _domObserver(
   observer.observe(
     dom,
     options || {
+      subtree: false,
       childList: true, // 观察目标子节点的变化，是否有添加或者删除
       attributes: false, // 观察属性变动
     }
