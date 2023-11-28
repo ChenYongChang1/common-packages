@@ -3,7 +3,7 @@
 1. vue3 自定义指令
 
    1. dom 出现在视口区域内 `side-in` 渐入效果
-   2. `clickOutside` 点击指定 dom 意外以外的地方
+   2. `clickOutside` 点击指定 dom 以外的地方 执行回调
 
 2. vue3 props 的 hooks `usePropsHook`
 
@@ -23,4 +23,6 @@
 
 5. tdk
 
-6. addListener `addEventListener 当页面卸载会自动 移除监听`
+6. 浏览器相关
+   1. addListener `addEventListener 当页面卸载会自动 移除监听`
+   2. mutationObserver `mutationObserver 直接dom.mutationObserver 会监听dom变化`
