@@ -12,6 +12,7 @@
    ```javascript
    const filterData = usePropsHook(props, emit, "modelValue");
    filterData.value.k = 1;
+   // 这个filterData 可以直接在子组件template里面直接使用
    ```
 
 3. date 相关
