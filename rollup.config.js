@@ -9,6 +9,8 @@ const pkg = require("./package.json");
 const serve = require("rollup-plugin-serve");
 const livereload = require("rollup-plugin-livereload");
 const { terser } = require("rollup-plugin-terser");
+const postcss = require("rollup-plugin-postcss");
+
 const isDev = process.env.npm_lifecycle_event === "dev";
 const httpServer = isDev
   ? [
@@ -19,32 +21,22 @@ const httpServer = isDev
       livereload("lib"),
     ]
   : [];
-module.exports = {
-  input: "./src/index.ts",
-  output: [
-    {
-      file: pkg.main,
-      format: "cjs",
-    },
-    {
-      file: pkg.module,
-      format: "esm",
-    },
-    {
-      file: pkg.browser,
-      name: "DdCommonPackages",
-      globals: {
-        vue: "vue",
-      },
-      format: "umd",
-    },
-  ],
+
+const baseRollup = {
   watch: {
     // 配置监听处理
     exclude: "node_modules/**",
   },
   plugins: [
     ...httpServer,
+    postcss({
+      extract: "index.css", // 将 CSS 提取为单独的文件
+      minimize: true,
+      sourceMap: false,
+      extensions: [".css", ".scss"],
+      // 你也可以在这里配置 postcss 插件
+      plugins: [require("autoprefixer"), require("cssnano")],
+    }),
     terser(),
     resolve(),
     commonjs(),
@@ -73,3 +65,27 @@ module.exports = {
   ],
   external: isDev ? [] : ["vue"],
 };
+module.exports = [
+  {
+    ...baseRollup,
+    input: "./src/index.ts",
+    output: [
+      {
+        file: pkg.main,
+        format: "cjs",
+      },
+      {
+        file: pkg.module,
+        format: "esm",
+      },
+      {
+        file: pkg.browser,
+        name: "DdCommonPackages",
+        globals: {
+          vue: "vue",
+        },
+        format: "umd",
+      },
+    ],
+  },
+];
