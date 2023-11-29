@@ -1,0 +1,5955 @@
+.sp-1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: var(--primary-color) #0000;
+  animation: s1 1s infinite;
+}
+
+.sp-2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: var(--secondary-color);
+  border-right-color: var(--primary-color);
+  animation: s2 1s infinite linear;
+}
+
+.sp-3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, var(--primary-color));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s2 1s infinite linear;
+}
+
+.sp-6 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  background: radial-gradient(farthest-side, var(--primary-color) 95%, #0000)
+      50% 0/12px 12px no-repeat,
+    radial-gradient(
+        farthest-side,
+        #0000 calc(100% - 5px),
+        var(--primary-color) calc(100% - 4px)
+      )
+      content-box;
+  animation: s2 2s infinite;
+}
+
+.sp-7 {
+  width: 50px;
+  height: 50px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s1 1s infinite;
+}
+
+.sp-8 {
+  width: 50px;
+  height: 50px;
+  color: var(--primary-color);
+  --c: radial-gradient(farthest-side, currentColor 92%, #0000);
+  background: var(--c) 50% 0 /12px 12px, var(--c) 50% 100%/12px 12px,
+    var(--c) 100% 50%/12px 12px, var(--c) 0 50%/12px 12px,
+    var(--c) 50% 50%/12px 12px,
+    linear-gradient(currentColor 0 0) 50% 50%/4px 100%,
+    linear-gradient(currentColor 0 0) 50% 50%/100% 4px;
+  background-repeat: no-repeat;
+  animation: s1 1s infinite linear;
+}
+
+.sp-9 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--primary-color) 95%, #0000)
+      50% 1px/12px 12px no-repeat,
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 14px),
+      var(--secondary-color) 0
+    );
+  animation: s9 2s infinite linear;
+}
+
+.sp-10 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) center/100% 4px,
+    linear-gradient(currentColor 0 0) center/4px 100%,
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 6px),
+      currentColor calc(100% - 5px)
+    ),
+    radial-gradient(circle 6px, currentColor 94%, #0000 0);
+  background-repeat: no-repeat;
+  animation: s1 2s infinite linear;
+  position: relative;
+}
+
+.sp-10:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.sp-91 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 6px;
+  background: conic-gradient(
+        from 135deg at top,
+        var(--primary-color) 90deg,
+        #0000 0
+      )
+      0 calc(50% - 4px) / 17px 8.5px,
+    radial-gradient(
+        farthest-side at bottom left,
+        #0000 calc(100% - 6px),
+        var(--primary-color) calc(100% - 5px) 99%,
+        #0000
+      )
+      top right/50% 50% content-box content-box,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 6px),
+        var(--primary-color) calc(100% - 5px) 99%,
+        #0000
+      )
+      bottom / 100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: s1 1s infinite linear;
+}
+
+.sp-92 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+
+.sp-92::before,
+.sp-92::after {
+  content: "";
+  grid-area: 1/1;
+  --c: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s2 1s infinite;
+}
+
+.sp-92::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+.sp-93 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--primary-color) 94%, #0000)
+      top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, var(--primary-color));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s2 1s infinite linear;
+}
+
+.sp-94 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  animation: s4 4s infinite;
+}
+
+.sp-94::before,
+.sp-94::after {
+  content: "";
+  grid-area: 1/1;
+  border: 8px solid;
+  border-radius: 50%;
+  border-color: var(--primary-color) var(--primary-color) #0000 #0000;
+  mix-blend-mode: darken;
+  animation: s4 1s infinite linear;
+}
+
+.sp-94::after {
+  border-color: #0000 #0000 var(--secondary-color) var(--secondary-color);
+  animation-direction: reverse;
+}
+
+.sp-95 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: var(--primary-color);
+  animation: s5 1s infinite linear;
+}
+
+.sp-95::before,
+.sp-95::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: s5 2s infinite;
+}
+
+.sp-95::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+
+.sp-96 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: var(--secondary-color) #0000;
+  animation: s2 1s infinite linear;
+}
+
+.sp-96::before,
+.sp-96::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.sp-96::before {
+  border-color: var(--primary-color) #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.sp-96::after {
+  margin: 8px;
+}
+
+.sp-97 {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      center/16px 16px,
+    radial-gradient(farthest-side, var(--tertiary-color) 90%, #0000) bottom/12px
+      12px;
+  background-repeat: no-repeat;
+  animation: s1 1s infinite linear;
+  position: relative;
+}
+
+.sp-97::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  inset: auto 0 16px;
+  margin: auto;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  transform-origin: 50% calc(100% + 10px);
+  animation: inherit;
+  animation-duration: 0.5s;
+}
+
+.sp-98 {
+  width: 50px;
+  height: 50px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  animation: s1 1s infinite;
+  position: relative;
+}
+
+.sp-98::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: 3px;
+  background: repeating-conic-gradient(
+    #0000 0 35deg,
+    var(--primary-color) 0 90deg
+  );
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+  border-radius: 50%;
+}
+
+.sp-99 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: var(--primary-color);
+  background: radial-gradient(
+    farthest-side,
+    currentColor calc(100% - 6px),
+    #0000 calc(100% - 5px) 0
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 13px),
+    #000 calc(100% - 12px)
+  );
+  border-radius: 50%;
+  animation: s9 2s infinite linear;
+}
+
+.sp-99::before,
+.sp-99::after {
+  content: "";
+  grid-area: 1/1;
+  background: linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px, 10px 100%;
+  background-repeat: no-repeat;
+}
+
+.sp-99::after {
+  transform: rotate(45deg);
+}
+
+.sp-100 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid var(--primary-color);
+  animation: s10-1 0.8s infinite linear alternate, s10-2 1.6s infinite linear;
+}
+
+.sp-171 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--primary-color) 0 90deg,
+    var(--secondary-color) 0 180deg
+  );
+  animation: s1 1s infinite linear;
+}
+
+.sp-172 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--primary-color) 25%,
+    var(--secondary-color) 0 50%,
+    var(--tertiary-color) 0 75%,
+    var(--primary-color) 0
+  );
+  animation: s2 2s infinite linear;
+}
+
+.sp-172::before,
+.sp-172::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 15%;
+  border-radius: 50%;
+  background: inherit;
+  animation: inherit;
+}
+
+.sp-172::after {
+  margin: 25%;
+  animation-duration: 3s;
+}
+
+.sp-173 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side, #0000 40%, #000 41%);
+  background: linear-gradient(
+        0deg,
+        var(--primary-color) 80 50%,
+        var(--primary-color) FF 0
+      )
+      center/4px 100%,
+    linear-gradient(
+        90deg,
+        var(--primary-color) 40 50%,
+        var(--primary-color) BF 0
+      )
+      center/100% 4px;
+  background-repeat: no-repeat;
+  animation: s2 1s infinite steps(12);
+}
+
+.sp-173::before,
+.sp-173::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+
+.sp-173::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+.sp-174 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: var(--primary-color) 97;
+  position: relative;
+  animation: s4 1s infinite linear;
+}
+
+.sp-174:before,
+.sp-174:after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+
+.sp-174:after {
+  animation-duration: 4s;
+}
+
+.sp-175 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  -webkit-mask: radial-gradient(
+    circle closest-side at 50% 40%,
+    #0000 94%,
+    #000
+  );
+  transform-origin: 50% 40%;
+  animation: s5 1s infinite linear;
+}
+
+.sp-176 {
+  width: 40px;
+  height: 10px;
+  color: var(--primary-color);
+  background: radial-gradient(farthest-side, currentColor 90%, #0000) left /
+      10px 10px,
+    radial-gradient(farthest-side, currentColor 90%, #0000) center/10px 10px,
+    radial-gradient(farthest-side, currentColor 90%, #0000) right / 10px 10px,
+    linear-gradient(currentColor 0 0) center/100% 4px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: s2 2s infinite linear;
+}
+
+.sp-176:before,
+.sp-176:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  animation: inherit;
+  --s: calc(50% - 5px);
+  animation-direction: reverse;
+}
+
+.sp-176:after {
+  --s: calc(5px - 50%);
+}
+
+.sp-177 {
+  --d: 22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0,
+    calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px,
+    calc(0 * var(--d)) calc(1 * var(--d)) 0 2px,
+    calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px,
+    calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px,
+    calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
+    calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
+  animation: s1 1s infinite steps(8);
+}
+
+.sp-178 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) center/100% 3px,
+    linear-gradient(currentColor 0 0) center/3px 100%;
+  background-repeat: no-repeat;
+  animation: s1 2s infinite;
+}
+
+.sp-178::before,
+.sp-178::after {
+  content: "";
+  grid-area: 1/1;
+  background: repeating-conic-gradient(#0000 0 35deg, currentColor 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+  border-radius: 50%;
+}
+
+.sp-178::after {
+  margin: 20%;
+}
+
+.sp-179 {
+  --s: 8px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  animation: s9 2s infinite linear;
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--s)) 0,
+    50% var(--s),
+    calc(50% + var(--s)) 0,
+    100% 0,
+    100% calc(50% - var(--s)),
+    calc(100% - var(--s)) 50%,
+    100% calc(50% + var(--s)),
+    100% 100%,
+    calc(50% + var(--s)) 100%,
+    50% calc(100% - var(--s)),
+    calc(50% - var(--s)) 100%,
+    0 100%,
+    0 calc(50% + var(--s)),
+    var(--s) 50%,
+    0 calc(50% - var(--s))
+  );
+}
+
+.sp-180 {
+  --R: 30px;
+  --g1: var(--primary-color) 96%, #0000;
+  --g2: var(--secondary-color) 96%, #0000;
+  width: calc(2 * var(--R));
+  height: calc(2 * var(--R));
+  border-radius: 50%;
+  display: grid;
+  -webkit-mask: linear-gradient(#000 0 0);
+  animation: s1 2s infinite linear;
+}
+
+.sp-180::before,
+.sp-180::after {
+  content: "";
+  grid-area: 1/1;
+  width: 50%;
+  background: radial-gradient(farthest-side, var(--g1))
+      calc(var(--R) + 0.866 * var(--R) - var(--R))
+      calc(var(--R) - 0.5 * var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1))
+      calc(var(--R) + 0.866 * var(--R) - var(--R))
+      calc(var(--R) - 0.5 * var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g2))
+      calc(var(--R) + 0.5 * var(--R) - var(--R))
+      calc(var(--R) - 0.866 * var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) 0 calc(-1 * var(--R)),
+    radial-gradient(farthest-side, var(--g2))
+      calc(var(--R) - 0.5 * var(--R) - var(--R))
+      calc(var(--R) - 0.866 * var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1))
+      calc(var(--R) - 0.866 * var(--R) - var(--R))
+      calc(var(--R) - 0.5 * var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(-1 * var(--R)) 0,
+    radial-gradient(farthest-side, var(--g1))
+      calc(var(--R) - 0.866 * var(--R) - var(--R))
+      calc(var(--R) + 0.5 * var(--R) - var(--R));
+  background-size: calc(2 * var(--R)) calc(2 * var(--R));
+  background-repeat: no-repeat;
+}
+
+.sp-180::after {
+  transform: rotate(180deg);
+  transform-origin: right;
+}
+
+.sp-4a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, var(--primary-color)) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 calc(100% - 8px)
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s4 1s infinite steps(10);
+}
+
+.sp-5a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 70deg,
+      #0000 71deg 90deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 calc(100% - 8px)
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s5 1s infinite;
+}
+
+.sp-21 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(
+      circle closest-side,
+      var(--primary-color) 90%,
+      #0000
+    )
+    0 0/33% 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: d1 1s steps(4) infinite;
+}
+
+.sp-22 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(
+      circle closest-side,
+      var(--primary-color) 90%,
+      #0000
+    )
+    0 0/33% 100% no-repeat;
+  animation: d2 1s steps(3) infinite;
+}
+
+.sp-23 {
+  width: 50px;
+  height: 24px;
+  background: radial-gradient(
+        circle closest-side,
+        var(--primary-color) 90%,
+        #0000
+      )
+      0% 50%,
+    radial-gradient(circle closest-side, var(--primary-color) 90%, #0000) 50%
+      50%,
+    radial-gradient(circle closest-side, var(--primary-color) 90%, #0000) 100%
+      50%;
+  background-size: calc(100% / 3) 12px;
+  background-repeat: no-repeat;
+  animation: d3 1s infinite linear;
+}
+
+.sp-24 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(
+      circle closest-side at left 6px top 50%,
+      var(--primary-color) 90%,
+      #0000
+    ),
+    radial-gradient(circle closest-side, var(--primary-color) 90%, #0000),
+    radial-gradient(
+      circle closest-side at right 6px top 50%,
+      var(--primary-color) 90%,
+      #0000
+    );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: d4 1s infinite alternate;
+}
+
+.sp-25 {
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 20px 0 var(--primary-color) 22, -20px 0 var(--primary-color);
+  animation: d5 1s infinite linear alternate;
+}
+
+.sp-26 {
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 12px 0 var(--primary-color), -24px 0 var(--primary-color);
+  animation: d6 1s infinite linear alternate;
+}
+
+.sp-27 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(
+        circle closest-side,
+        var(--primary-color) 90%,
+        #0000
+      )
+      0% 50%,
+    radial-gradient(circle closest-side, var(--primary-color) 90%, #0000) 50%
+      50%,
+    radial-gradient(circle closest-side, var(--primary-color) 90%, #0000) 100%
+      50%;
+  background-size: calc(100% / 3) 100%;
+  background-repeat: no-repeat;
+  animation: d7 1s infinite linear;
+}
+
+.sp-28 {
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.sp-28::before,
+.sp-28::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.sp-28::before {
+  box-shadow: -24px 0 var(--primary-color);
+  animation: d8-1 1s infinite linear;
+}
+
+.sp-28::after {
+  transform: rotate(0deg) translateX(24px);
+  animation: d8-2 1s infinite linear;
+}
+
+.sp-29 {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  animation: d9-0 2s infinite steps(2);
+}
+
+.sp-29::before,
+.sp-29::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.sp-29::before {
+  box-shadow: 24px 0 var(--primary-color);
+  transform: translateX(-24px);
+  animation: d9-1 1s infinite linear alternate;
+}
+
+.sp-29::after {
+  transform: translateX(12px) rotate(0deg) translateX(12px);
+  animation: d9-2 1s infinite linear alternate;
+}
+
+.sp-30 {
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.sp-30::before,
+.sp-30::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.sp-30::before {
+  box-shadow: -24px 0 var(--primary-color);
+  animation: d10-1 2s infinite linear;
+}
+
+.sp-30::after {
+  transform: rotate(0deg) translateX(24px);
+  animation: d10-2 2s infinite linear;
+}
+
+.sp-11 {
+  width: 32px;
+  height: 32px;
+  --c: radial-gradient(circle closest-side, var(--primary-color) 90%, #0000);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 100% 100%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d1 1s infinite linear;
+}
+
+.sp-12 {
+  width: 50px;
+  height: 28px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c) 0 50%, var(--c) 50% 50%, var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d2 1s infinite linear;
+}
+
+.sp-13 {
+  width: 50px;
+  height: 28px;
+  background: radial-gradient(
+        farthest-side at bottom,
+        var(--primary-color) 90%,
+        #0000
+      )
+      0 calc(50% - 3px),
+    radial-gradient(farthest-side at top, var(--primary-color) 90%, #0000) 0
+      calc(50% + 3px),
+    radial-gradient(farthest-side at bottom, var(--primary-color) 90%, #0000)
+      50% calc(50% - 3px),
+    radial-gradient(farthest-side at top, var(--primary-color) 90%, #0000) 50%
+      calc(50% + 3px),
+    radial-gradient(farthest-side at bottom, var(--primary-color) 90%, #0000)
+      100% calc(50% - 3px),
+    radial-gradient(farthest-side at top, var(--primary-color) 90%, #0000) 100%
+      calc(50% + 3px);
+  background-size: 12px 6px;
+  background-repeat: no-repeat;
+  animation: d3 1s infinite linear;
+}
+
+.sp-14 {
+  width: 50px;
+  height: 28px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000) 0
+      50%/12px 12px,
+    radial-gradient(farthest-side at bottom, var(--primary-color) 90%, #0000)
+      50% calc(50% - 3px) / 12px 6px,
+    radial-gradient(farthest-side at top, var(--primary-color) 90%, #0000) 50%
+      calc(50% + 3px) / 12px 6px,
+    radial-gradient(farthest-side at bottom, var(--primary-color) 90%, #0000)
+      100% calc(50% - 3px) / 12px 6px,
+    radial-gradient(farthest-side at top, var(--primary-color) 90%, #0000) 100%
+      calc(50% + 3px) / 12px 6px;
+  background-repeat: no-repeat;
+  animation: d4 1s infinite;
+}
+
+.sp-15 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: d5-0 1s infinite linear;
+}
+
+.sp-15::before {
+  content: "";
+  position: absolute;
+  background: var(--primary-color);
+  border-radius: 50%;
+  inset: 0 calc(50% - 6px);
+  transform-origin: -13px 50%;
+  animation: d5-1 0.5s infinite linear;
+}
+
+.sp-16 {
+  width: 50px;
+  height: 27.6px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c) 50% 0, var(--c) 0 100%, var(--c) 100% 100%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: d6 1s infinite;
+}
+
+.sp-17 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  clip-path: inset(-25px -100px);
+  box-shadow: 19px -40px, 38px -40px, 57px -40px;
+  transform: translateX(-38px);
+  animation: d7 1s infinite;
+}
+
+.sp-18 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: -19px 0px, 19px 0px;
+  animation: d8 1s infinite;
+}
+
+.sp-19 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  clip-path: inset(-45px);
+  color: var(--primary-color);
+  box-shadow: -60px 15px, -60px 15px, -60px 15px;
+  transform: translateY(-15px);
+  animation: d9 1s infinite linear;
+}
+
+.sp-20 {
+  width: 76px;
+  height: 12px;
+  display: flex;
+}
+
+.sp-20:before,
+.sp-20:after {
+  content: "";
+  flex: 1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      center/12px 100%,
+    radial-gradient(farthest-side at right, var(--primary-color) 90%, #0000)
+      right / 6px 100%;
+  background-repeat: no-repeat;
+  transform: scale(var(--s, 1)) translate(0px) rotate(0);
+  animation: d10 2s infinite;
+}
+
+.sp-20:after {
+  --s: -1;
+}
+
+.sp-141 {
+  width: 4px;
+  height: 4px;
+  color: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: d1 0.5s infinite alternate linear;
+}
+
+.sp-142 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 0 3px;
+  position: relative;
+  animation: d2-0 2s infinite linear;
+}
+
+.sp-142:before,
+.sp-142:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: var(--primary-color);
+  transform: rotate(0deg) translate(18px);
+  animation: d2 1s infinite;
+}
+
+.sp-142:after {
+  animation-delay: -0.5s;
+}
+
+.sp-143 {
+  width: 50px;
+  height: 28px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      50% 0,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) 100% 0;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: d3-0 1.5s linear infinite;
+}
+
+.sp-143:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  left: 0;
+  top: 0;
+  animation: d3-1 1.5s linear infinite,
+    d3-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+.sp-144 {
+  width: 88px;
+  height: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      25% 0,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) 75% 0;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: d4-0 1s linear infinite;
+}
+
+.sp-144:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  inset: 0;
+  margin: auto;
+  animation: d4-1 1s cubic-bezier(0.5, 300, 0.5, -300) infinite;
+}
+
+.sp-145 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.sp-145:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  inset: 0;
+  margin: auto;
+  animation: d5-1 1s, d5-2 0.5s;
+  animation-timing-function: cubic-bezier(0.5, -900, 0.5, 900);
+  animation-iteration-count: infinite;
+}
+
+.sp-146 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  box-shadow: 19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px, 19px 0 0 5px,
+    38px 0 0 5px, 57px 0 0 5px, 19px 19px 0 0px, 38px 19px 0 0px,
+    57px 19px 0 0px;
+  transform: translateX(-38px);
+  animation: d6 2s infinite linear;
+}
+
+.sp-147 {
+  width: 50px;
+  height: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.sp-147:before,
+.sp-147:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  clip-path: inset(0 0 50%);
+  inset: 0;
+  margin: auto;
+  transform-origin: -13px 50%;
+  animation: d7 0.5s infinite alternate;
+}
+
+.sp-147:after {
+  --s: -1;
+  transform-origin: calc(100% + 13px) 50%;
+}
+
+.sp-148 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  clip-path: inset(-26px);
+  animation: d8 2s infinite linear;
+}
+
+.sp-149 {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  animation: d9-0 1s infinite;
+}
+
+.sp-149::before,
+.sp-149::after {
+  content: "";
+  width: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      top,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) bottom;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  transform-origin: 50% calc(100% - 6px);
+  animation: inherit;
+  animation-name: d9-1;
+}
+
+.sp-149::after {
+  --s: -1;
+}
+
+.sp-150 {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sp-150::before,
+.sp-150::after {
+  content: "";
+  width: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      top,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) bottom;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  transform-origin: 50% calc(100% - 6px);
+  animation: d10 1s infinite;
+}
+
+.sp-150::after {
+  transform-origin: 50% 6px;
+}
+
+.sp-201 {
+  width: 50px;
+  height: 12px;
+  display: grid;
+  animation: d1-0 1s infinite;
+}
+
+.sp-201:before,
+.sp-201:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
+
+.sp-201:after {
+  transform: rotate(0) translate(19px) rotate(0);
+  animation: inherit;
+  animation-name: d1-1;
+}
+
+.sp-202 {
+  width: 69px;
+  height: 12px;
+  display: grid;
+}
+
+.sp-202:before,
+.sp-202:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d2 1s infinite;
+}
+
+.sp-202:after {
+  margin: 0 19px;
+  animation-direction: reverse;
+}
+
+.sp-203 {
+  width: 69px;
+  height: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sp-203:before,
+.sp-203:after {
+  content: "";
+  width: 31px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  transform-origin: 6px 50%;
+  transform: translate(0) rotate(0);
+  animation: d3 1s infinite linear;
+}
+
+.sp-203:after {
+  --s: -1;
+  transform-origin: calc(100% - 6px) 50%;
+}
+
+.sp-204 {
+  width: 50px;
+  height: 12px;
+  display: grid;
+}
+
+.sp-204:before,
+.sp-204:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d4 1s infinite;
+  transform: translate(var(--d, 0)) rotate(0);
+}
+
+.sp-204:after {
+  --d: 19px;
+  animation-delay: 0.5s;
+}
+
+.sp-205 {
+  width: 69px;
+  height: 12px;
+  display: grid;
+}
+
+.sp-205:before,
+.sp-205:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d5 1s infinite linear;
+}
+
+.sp-205:after {
+  margin-left: auto;
+  --s: -1;
+}
+
+.sp-206 {
+  width: 69px;
+  height: 12px;
+  display: grid;
+  animation: d6-0 2s infinite linear;
+}
+
+.sp-206:before,
+.sp-206:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d6-1 1s infinite linear;
+}
+
+.sp-206:after {
+  margin-left: auto;
+  --s: -1;
+}
+
+.sp-207 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  animation: d7-1 0.75s infinite linear alternate, d7-2 1.5s infinite linear;
+}
+
+.sp-208 {
+  width: 32px;
+  height: 32px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 100% 100%, var(--c) 0 100%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d8 0.5s infinite;
+}
+
+.sp-209 {
+  width: 69px;
+  height: 12px;
+  display: grid;
+  animation: d9-0 1s infinite linear;
+}
+
+.sp-209:before,
+.sp-209:after {
+  content: "";
+  width: 31px;
+  grid-area: 1/1;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      left,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d9-1 1s infinite linear;
+}
+
+.sp-209:after {
+  margin-left: auto;
+  --s: -1;
+}
+
+.sp-210 {
+  width: 69px;
+  height: 12px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d10-1 0.75s infinite alternate, d10-2 1.5s infinite alternate;
+}
+
+.sp-271 {
+  width: 25px;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sp-271:before,
+.sp-271:after {
+  content: "";
+  width: 12px;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      top,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000) bottom;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  transform: rotate(calc(var(--s, 1) * 45deg));
+  animation: d1 0.5s infinite linear alternate;
+}
+
+.sp-271:after {
+  --s: -1;
+}
+
+.sp-272 {
+  width: 69px;
+  height: 12px;
+  display: flex;
+  justify-content: space-between;
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      calc(1 * 100% / 3) 0,
+    radial-gradient(farthest-side, var(--primary-color) 90%, #0000)
+      calc(2 * 100% / 3) 0;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
+
+.sp-272:before,
+.sp-272:after {
+  content: "";
+  width: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: d2 1s infinite;
+}
+
+.sp-272:after {
+  --s: -1, -1;
+}
+
+.sp-273 {
+  width: 69px;
+  height: 36px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d3 1s infinite linear;
+}
+
+.sp-274 {
+  width: 69px;
+  height: 30px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d4 1s infinite linear alternate;
+}
+
+.sp-275 {
+  width: 69px;
+  height: 36px;
+  --c0: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  --c1: radial-gradient(farthest-side at top, var(--primary-color) 90%, #0000);
+  --c2: radial-gradient(
+    farthest-side at bottom,
+    var(--primary-color) 90%,
+    #0000
+  );
+  background: var(--c0), var(--c1), var(--c2), var(--c0), var(--c1), var(--c2);
+  background-size: 12px 12px, 12px 6px, 12px 6px;
+  background-repeat: no-repeat;
+  animation: d5 1s infinite;
+}
+
+.sp-276 {
+  width: 32px;
+  height: 32px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d6 1s infinite;
+}
+
+.sp-277 {
+  width: 32px;
+  height: 32px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--c), var(--c);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d7-0 0.75s infinite;
+  display: flex;
+}
+
+.sp-277:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform-origin: calc(100% + 14px) 50%;
+  background: var(--primary-color);
+  animation: d7-1 0.75s infinite;
+}
+
+.sp-278 {
+  width: 32px;
+  height: 32px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--c);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: d8-0 0.75s infinite;
+  display: grid;
+}
+
+.sp-278:before,
+.sp-278:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin: 0 auto auto 0;
+  border-radius: 50%;
+  transform-origin: calc(100% + 14px) 50%;
+  background: var(--primary-color);
+  animation: d8-1 0.75s infinite;
+}
+
+.sp-278:after {
+  margin: auto auto 0 0;
+  transform-origin: 50% -14px;
+}
+
+.sp-279 {
+  width: 52px;
+  height: 12px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c) left, var(--c) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  display: grid;
+}
+
+.sp-279:before,
+.sp-279:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  grid-area: 1/1;
+  margin: auto;
+  border-radius: 50%;
+  transform-origin: -12px 50%;
+  background: var(--primary-color);
+  animation: d9 1s infinite linear;
+}
+
+.sp-279:after {
+  transform-origin: calc(100% + 12px) 50%;
+  --s: -1;
+  animation-delay: -0.5s;
+}
+
+.sp-280 {
+  width: 52px;
+  height: 12px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c) left, var(--c) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.sp-280:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  animation: d10 2s infinite;
+}
+
+.sp-31 {
+  width: 45px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 9px 100%;
+  background-repeat: no-repeat;
+  animation: b1 1s infinite linear;
+}
+
+.sp-32 {
+  width: 45px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 9px 100%;
+  background-repeat: no-repeat;
+  animation: b2 1s infinite linear;
+}
+
+.sp-33 {
+  width: 45px;
+  height: 40px;
+  background: linear-gradient(
+        #0000 calc(1 * 100% / 6),
+        var(--primary-color) 0 calc(3 * 100% / 6),
+        #0000 0
+      )
+      left bottom,
+    linear-gradient(
+        #0000 calc(2 * 100% / 6),
+        var(--primary-color) 0 calc(4 * 100% / 6),
+        #0000 0
+      )
+      center bottom,
+    linear-gradient(
+        #0000 calc(3 * 100% / 6),
+        var(--primary-color) 0 calc(5 * 100% / 6),
+        #0000 0
+      )
+      right bottom;
+  background-size: 9px 600%;
+  background-repeat: no-repeat;
+  animation: b3 1s infinite linear;
+}
+
+.sp-34 {
+  width: 45px;
+  height: 40px;
+  --c: linear-gradient(
+    var(--primary-color) calc(50% - 10px),
+    #0000 0 calc(50% + 10px),
+    var(--primary-color) 0
+  );
+  background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 9px calc(200% + 20px);
+  background-repeat: no-repeat;
+  animation: b4 1s infinite linear;
+}
+
+.sp-35 {
+  width: 45px;
+  height: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 9px 65%;
+  background-repeat: no-repeat;
+  animation: b5 1s infinite linear;
+}
+
+.sp-36 {
+  width: 45px;
+  height: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 9px 50%;
+  background-repeat: no-repeat;
+  animation: b6 1s infinite linear;
+}
+
+.sp-37 {
+  width: 45px;
+  height: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 9px 50%;
+  background-repeat: no-repeat;
+  animation: b7 1s infinite linear alternate;
+}
+
+.sp-38 {
+  width: 45px;
+  height: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 9px 65%;
+  background-repeat: no-repeat;
+  animation: b8 1s infinite linear;
+}
+
+.sp-39 {
+  width: 45px;
+  height: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 9px 60%;
+  background-repeat: no-repeat;
+  animation: b9 1s infinite;
+}
+
+.sp-40 {
+  width: 54px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c) 50% 0, var(--c) 50% 100%;
+  background-size: 45px 50%;
+  background-repeat: no-repeat;
+  animation: b10 1s infinite linear;
+}
+
+.sp-161 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 0, var(--c) 50% 100%,
+    var(--c) 100% 0, var(--c) 100% 100%;
+  animation: b1 1s infinite linear;
+}
+
+.sp-162 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 0, var(--c) 50% 100%,
+    var(--c) 100% 0, var(--c) 100% 100%;
+  animation: b2 1s infinite;
+}
+
+.sp-163 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 50%, var(--c) 100% 0,
+    var(--c) 100% 100%;
+  animation: b3 1s infinite alternate;
+}
+
+.sp-164 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+  animation: b4-1 0.5s infinite alternate, b4-2 2s infinite;
+}
+
+.sp-165 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c);
+  animation: b5-1 1s infinite, b5-2 1s infinite;
+}
+
+.sp-166 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c);
+  animation: b6-1 1s infinite, b6-2 1s infinite;
+}
+
+.sp-167 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 50% 50%, var(--c) 100% 100%;
+  animation: b7 1s infinite alternate;
+}
+
+.sp-168 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c);
+  animation: b8-1 1s infinite, b8-2 1s infinite;
+}
+
+.sp-169 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: conic-gradient(from -90deg, var(--primary-color) 90deg, #0000 0);
+  background: var(--c), var(--c);
+  background-size: 40% 40%;
+  animation: b9 1s infinite alternate;
+}
+
+.sp-170 {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: conic-gradient(from -90deg, var(--primary-color) 90deg, #0000 0);
+  background: var(--c), var(--c);
+  background-size: 40% 40%;
+  animation: b10 1.5s infinite;
+}
+
+.sp-211 {
+  width: 45px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 100% 26%;
+  background-repeat: no-repeat;
+  animation: b1 1.5s infinite;
+}
+
+.sp-212 {
+  width: 45px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 100% 26%;
+  background-repeat: no-repeat;
+  animation: b2 1.5s infinite;
+}
+
+.sp-213 {
+  width: 72px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 45px 26%;
+  background-repeat: no-repeat;
+  animation: b3 1s infinite;
+}
+
+.sp-214 {
+  width: 45px;
+  height: 54px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 100% 21%;
+  background-repeat: no-repeat;
+  animation: b4.75s infinite alternate;
+}
+
+.sp-215 {
+  width: 45px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: calc(100% + 18px) 26%;
+  background-repeat: no-repeat;
+  animation: b5 0.75s infinite;
+}
+
+.sp-216 {
+  width: 45px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: calc(100% + 18px) 26%;
+  background-repeat: no-repeat;
+  animation: b6 0.75s infinite linear;
+}
+
+.sp-217 {
+  width: 45px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: calc(100% + 18px) 26%;
+  background-repeat: no-repeat;
+  animation: b7 0.75s infinite linear;
+}
+
+.sp-218 {
+  width: 63px;
+  height: 45px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 9px,
+    #0000 0 18px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 45px 26%;
+  background-repeat: no-repeat;
+  animation: b8 1s infinite;
+}
+
+.sp-219 {
+  width: 9px;
+  height: 9px;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px,
+    18px 9px, -18px 18px, 0 18px, 18px 18px;
+  animation: b9 2s infinite;
+}
+
+.sp-220 {
+  width: 9px;
+  height: 9px;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px,
+    18px 9px, -18px 18px, 0 18px, 18px 18px;
+  animation: b10 2s infinite;
+}
+
+.sp-41 {
+  width: 90px;
+  height: 14px;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--primary-color) 0 calc(25% - 5px),
+      #0000 0 25%
+    )
+    left/calc(4 * 100%/3) 100%;
+  animation: i1 0.5s infinite linear;
+}
+
+.sp-42 {
+  width: 90px;
+  height: 14px;
+  background: radial-gradient(
+      circle closest-side,
+      var(--primary-color) 92%,
+      #0000
+    )
+    calc(100% / 3) 0 / calc(100% / 4) 100%;
+  animation: i2 0.5s infinite linear;
+}
+
+.sp-43 {
+  width: calc(80px / 0.707);
+  height: 14px;
+  background: repeating-linear-gradient(
+      -45deg,
+      var(--primary-color) 0 15px,
+      #0000 0 20px
+    )
+    left/200% 100%;
+  animation: i3 2s infinite linear;
+}
+
+.sp-44 {
+  width: calc(80px / 0.707);
+  height: 14px;
+  background: repeating-linear-gradient(
+        135deg,
+        var(--primary-color) 0 15px,
+        #0000 0 20px
+      )
+      left top,
+    repeating-linear-gradient(45deg, var(--primary-color) 0 15px, #0000 0 20px)
+      left bottom;
+  background-size: 200% 50%;
+  background-repeat: no-repeat;
+  animation: i4 2s infinite linear;
+}
+
+.sp-45 {
+  width: 90px;
+  height: 14px;
+  background: radial-gradient(
+      circle 10px at right 7px top 50%,
+      #0000 92%,
+      var(--primary-color)
+    ),
+    radial-gradient(
+      circle 10px at right 0 top 50%,
+      var(--primary-color) 92%,
+      #0000
+    );
+  background-size: calc(100% / 3) 100%;
+  background-position: 50% 0%;
+  animation: i5 0.5s infinite linear;
+}
+
+.sp-46 {
+  width: 90px;
+  height: 14px;
+  background: conic-gradient(
+      from 45deg at calc(100% - 7px) 50%,
+      var(--primary-color) 90deg,
+      #0000 0
+    ),
+    conic-gradient(from -135deg at 7px 50%, var(--primary-color) 90deg, #0000 0);
+  background-position: calc(100% / 3) 0;
+  background-size: calc(100% / 4) 100%;
+  animation: i6 0.5s infinite linear;
+}
+
+.sp-47 {
+  width: 90px;
+  height: 14px;
+  background: linear-gradient(90deg, var(--primary-color) 50%, #0000 0) repeat-x,
+    conic-gradient(
+      from 45deg at right 7px top 50%,
+      var(--primary-color) 90deg,
+      #0000 0
+    );
+  background-position: calc(100% / 3) 50%;
+  background-size: calc(100% / 4) 60%, calc(100% / 4) 100%;
+  animation: i7 0.5s infinite linear;
+}
+
+.sp-48 {
+  width: 90px;
+  height: 12px;
+  background: linear-gradient(90deg, var(--primary-color) 50%, #0000 0) 0 0%,
+    linear-gradient(-90deg, var(--primary-color) 50%, #0000 0) 0 50%,
+    linear-gradient(90deg, var(--primary-color) 50%, #0000 0) 0 100%;
+  background-size: 8px calc(100% / 3);
+  background-repeat: repeat-x;
+  animation: i8 0.25s infinite linear;
+}
+
+.sp-49 {
+  width: 90px;
+  height: 14px;
+  background: linear-gradient(
+      90deg,
+      #0000 16px,
+      var(--primary-color) 0 30px,
+      #0000 0
+    ),
+    radial-gradient(
+      circle closest-side at 68% 50%,
+      var(--primary-color) 92%,
+      #0000
+    ),
+    conic-gradient(
+      from 45deg at calc(100% - 7px) 50%,
+      var(--primary-color) 90deg,
+      #0000 0
+    ),
+    conic-gradient(from -135deg at 7px 50%, var(--primary-color) 90deg, #0000 0);
+  background-position: 0 0;
+  background-size: calc(3 * 100% / 4) 100%;
+  background-repeat: repeat-x;
+  animation: i9 2s infinite linear;
+}
+
+.sp-50 {
+  width: 90px;
+  height: 12px;
+  background: linear-gradient(90deg, var(--primary-color) 50%, #0000 0) 0 0%,
+    linear-gradient(-90deg, var(--primary-color) 50%, #0000 0) 0 0%;
+  background-size: 20px 100%;
+  background-repeat: repeat-x;
+  animation: i10 1s infinite linear;
+}
+
+.sp-51 {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(90deg, #0001 33%, #0005 50%, #0001 66%)
+    var(--primary-color);
+  background-size: 300% 100%;
+  animation: ct1 1s infinite linear;
+}
+
+.sp-52 {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(90deg, #0000, var(--primary-color)) left -50px top
+    0/50px 20px no-repeat var(--secondary-color);
+  animation: ct2 1s infinite linear;
+}
+
+.sp-53 {
+  width: 120px;
+  height: 20px;
+  transform: skewX(-45deg);
+  background: linear-gradient(var(--primary-color) 0 0) left -30px top 0/30px 20px
+    no-repeat var(--secondary-color);
+  animation: ct3 1s infinite linear;
+}
+
+.sp-54 {
+  width: 120px;
+  height: 22px;
+  border-radius: 40px;
+  color: var(--secondary-color);
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-54::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  width: 14px;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  border-radius: inherit;
+  background: var(--primary-color);
+  box-shadow: -10px 0 12px 3px var(--primary-color);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%, -30px 50%);
+  animation: ct4 1s infinite linear;
+}
+
+.sp-55 {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(var(--primary-color) 0 0) left -40px top 0/40px 20px,
+    linear-gradient(var(--secondary-color) 0 0) center/100% 50%;
+  background-repeat: no-repeat;
+  animation: ct5 1s infinite linear;
+}
+
+.sp-56 {
+  width: 120px;
+  height: 20px;
+  background: radial-gradient(circle 10px, var(--primary-color) 95%, #0000)
+      right / calc(200% + 20px) 100%,
+    linear-gradient(var(--primary-color) 0 0) center/100% 6px;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 4px, #0000 93%, var(--primary-color))
+    right/calc(200% + 20px) 100%;
+  animation: ct6 1s infinite linear;
+}
+
+.sp-57 {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: linear-gradient(90deg, var(--primary-color) 70%, #0000 0)
+    left/20% 100%;
+  background: linear-gradient(var(--primary-color) 0 0) left -25% top 0 /20%
+    100% no-repeat var(--secondary-color);
+  animation: ct7 1s infinite steps(6);
+}
+
+.sp-58 {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+      to bottom right,
+      #0000 calc(50% - 40px),
+      var(--primary-color) 50%,
+      #0000 calc(50% + 40px)
+    )
+    bottom right/calc(200% + 80px) calc(200% + 80px) var(--secondary-color);
+  animation: ct8 1s infinite;
+}
+
+.sp-59 {
+  width: 120px;
+  height: 20px;
+  background: radial-gradient(
+      circle closest-side,
+      var(--primary-color) 94%,
+      #0000
+    )
+    50% 50% / calc(50% + 10px) 70% repeat-x var(--secondary-color);
+  animation: ct9 1s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-60 {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(var(--primary-color) 0 0) left -40px top 0/40px 100%
+    no-repeat var(--secondary-color);
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% 5px no-repeat,
+    linear-gradient(#000 0 0) bottom/100% 5px no-repeat,
+    repeating-linear-gradient(90deg, #000 0 5px, #0000 0 20%)
+      left/calc(100% - 5px) 100%;
+  animation: ct10 1s infinite linear;
+}
+
+.sp-61 {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p1 2s infinite linear;
+}
+
+.sp-62 {
+  width: 120px;
+  height: 20px;
+  border-radius: 20px;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p2 2s infinite steps(10);
+}
+
+.sp-63 {
+  width: 120px;
+  height: 20px;
+  border-radius: 20px;
+  background: repeating-linear-gradient(
+        135deg,
+        var(--primary-color) 0 10px,
+        var(--primary-color) bf 0 20px
+      )
+      left/0% 100% no-repeat,
+    repeating-linear-gradient(
+        135deg,
+        var(--primary-color) 33 0 10px,
+        var(--primary-color) 1a 0 20px
+      )
+      left/100% 100%;
+  animation: p3 2s infinite;
+}
+
+.sp-64 {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: linear-gradient(90deg, var(--primary-color) 70%, #0000 0)
+    left/20% 100%;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p4 2s infinite steps(6);
+}
+
+.sp-65 {
+  width: 80px;
+  height: 40px;
+  border: 2px solid var(--primary-color);
+  border-right-color: transparent;
+  padding: 3px;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--primary-color) 0 10px,
+      #0000 0 15px
+    )
+    left/0% 100% no-repeat content-box content-box;
+  position: relative;
+  animation: p5 2s infinite steps(6);
+}
+
+.sp-65::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: 100%;
+  width: 10px;
+  background: linear-gradient(
+        #0000 calc(50% - 7px),
+        var(--primary-color) 0 calc(50% - 5px),
+        #0000 0 calc(50% + 5px),
+        var(--primary-color) 0 calc(50% + 7px),
+        #0000 0
+      )
+      left / 100% 100%,
+    linear-gradient(
+        var(--primary-color) calc(50% - 5px),
+        #0000 0 calc(50% + 5px),
+        var(--primary-color) 0
+      )
+      left / 2px 100%,
+    linear-gradient(
+        #0000 calc(50% - 5px),
+        var(--primary-color) 0 calc(50% + 5px),
+        #0000 0
+      )
+      right/2px 100%;
+  background-repeat: no-repeat;
+}
+
+.sp-66 {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: var(--primary-color);
+  border: 2px solid;
+  position: relative;
+}
+
+.sp-66::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: var(--primary-color);
+  animation: p6 2s infinite;
+}
+
+.sp-67 {
+  width: 120px;
+  height: 24px;
+  -webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) 0 0/25%
+      100%,
+    linear-gradient(#000 0 0) center/calc(100% - 12px) calc(100% - 12px)
+      no-repeat;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p7 2s infinite linear;
+}
+
+.sp-68 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-mask: linear-gradient(0deg, #000 55%, #0000 0) bottom/100% 18.18%;
+  background: linear-gradient(var(--primary-color) 0 0) bottom/100% 0% no-repeat
+    var(--secondary-color);
+  animation: p8 2s infinite steps(7);
+}
+
+.sp-69 {
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      var(--primary-color) 80%
+    ),
+    radial-gradient(
+      var(--r1) var(--r2) at bottom,
+      var(--primary-color) 79.5%,
+      #0000 80%
+    ),
+    radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      var(--primary-color) 80%
+    ),
+    var(--secondary-color);
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: p9 2s infinite linear;
+}
+
+.sp-70 {
+  width: 120px;
+  height: 60px;
+  border-radius: 200px 200px 0 0;
+  -webkit-mask: repeating-radial-gradient(
+    farthest-side at bottom,
+    #0000 0,
+    #000 1px 12%,
+    #0000 calc(12% + 1px) 20%
+  );
+  background: radial-gradient(
+      farthest-side at bottom,
+      var(--primary-color) 0 95%,
+      #0000 0
+    )
+    bottom/0% 0% no-repeat var(--secondary-color);
+  animation: p10 2s infinite steps(6);
+}
+
+.sp-111 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: p1 2s infinite;
+}
+
+.sp-112 {
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(var(--primary-color) 50%, #0000 0),
+    linear-gradient(#0000 50%, var(--primary-color) 0),
+    linear-gradient(var(--primary-color) 50%, #0000 0),
+    linear-gradient(#0000 50%, var(--primary-color) 0),
+    linear-gradient(var(--primary-color) 50%, #0000 0),
+    linear-gradient(#0000 50%, var(--primary-color) 0) var(--secondary-color);
+  background-size: calc(100% / 6 + 1px) 200%;
+  background-repeat: no-repeat;
+  animation: p2 2s infinite;
+}
+
+.sp-113 {
+  width: 124px;
+  height: 24px;
+  -webkit-mask: conic-gradient(
+        from 135deg at top,
+        #0000,
+        #000 0.5deg 90deg,
+        #0000 90.5deg
+      )
+      0 0,
+    conic-gradient(
+        from -45deg at bottom,
+        #0000,
+        #000 0.5deg 90deg,
+        #0000 90.5deg
+      )
+      0 100%;
+  -webkit-mask-size: 25% 50%;
+  -webkit-mask-repeat: repeat-x;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p3 2s infinite linear;
+}
+
+.sp-114 {
+  width: 60px;
+  height: 50px;
+  -webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) calc(0 * 100% / 4)
+      100% / calc(100% / 5) calc(1 * 100% / 5),
+    linear-gradient(90deg, #000 70%, #0000 0) calc(1 * 100% / 4) 100% /
+      calc(100% / 5) calc(2 * 100% / 5),
+    linear-gradient(90deg, #000 70%, #0000 0) calc(2 * 100% / 4) 100% /
+      calc(100% / 5) calc(3 * 100% / 5),
+    linear-gradient(90deg, #000 70%, #0000 0) calc(3 * 100% / 4) 100% /
+      calc(100% / 5) calc(4 * 100% / 5),
+    linear-gradient(90deg, #000 70%, #0000 0) calc(4 * 100% / 4) 100% /
+      calc(100% / 5) calc(5 * 100% / 5);
+  -webkit-mask-repeat: no-repeat;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p4 2s infinite steps(6);
+}
+
+.sp-115 {
+  width: 80px;
+  height: calc(80px * 0.866);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0);
+  background-size: 100% calc(100% / 5 + 1px);
+  background-repeat: no-repeat;
+  animation: p5 2s infinite;
+}
+
+.sp-116 {
+  height: 4px;
+  width: 130px;
+  background: linear-gradient(var(--primary-color) 0 0),
+    linear-gradient(var(--primary-color) 0 0), var(--secondary-color);
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  animation: p6 3s infinite;
+}
+
+.sp-117 {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: radial-gradient(
+      circle closest-side,
+      var(--primary-color) 94%,
+      #0000
+    )
+    left/20% 100%;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100% no-repeat
+    var(--secondary-color);
+  animation: p7 2s infinite steps(6);
+}
+
+.sp-118 {
+  width: 60px;
+  height: 60px;
+  border: 15px solid var(--secondary-color);
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.sp-118::before {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  border: 15px solid var(--primary-color);
+  animation: p8 2s infinite linear;
+}
+
+.sp-119 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(var(--primary-color) 0 0) bottom/100% 0% no-repeat
+    var(--secondary-color);
+  -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
+    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  animation: p9 2s infinite linear;
+}
+
+.sp-120 {
+  --s: 20px;
+  height: calc(var(--s) * 0.9);
+  width: calc(var(--s) * 5);
+  --v1: transparent, #000 0.5deg 108deg, #0000 109deg;
+  --v2: transparent, #000 0.5deg 36deg, #0000 37deg;
+  -webkit-mask: conic-gradient(
+      from 54deg at calc(var(--s) * 0.68) calc(var(--s) * 0.57),
+      var(--v1)
+    ),
+    conic-gradient(
+      from 90deg at calc(var(--s) * 0.02) calc(var(--s) * 0.35),
+      var(--v2)
+    ),
+    conic-gradient(
+      from 126deg at calc(var(--s) * 0.5) calc(var(--s) * 0.7),
+      var(--v1)
+    ),
+    conic-gradient(from 162deg at calc(var(--s) * 0.5) 0, var(--v2));
+  -webkit-mask-size: var(--s) var(--s);
+  -webkit-mask-composite: xor, destination-over;
+  mask-composite: exclude, add;
+  -webkit-mask-repeat: repeat-x;
+  background: linear-gradient(var(--primary-color) 0 0) left/0% 100%
+    var(--secondary-color) no-repeat;
+  animation: p10 2s infinite linear;
+}
+
+.sp-71 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation: sh1 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-72 {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  animation: sh2 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-73 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  transform: rotate(45deg);
+  animation: sh3-0 1.5s infinite linear;
+}
+
+.sp-73:before,
+.sp-73:after {
+  content: "";
+  width: 50%;
+  background: var(--primary-color);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  animation: inherit;
+  animation-name: sh3-1;
+}
+
+.sp-73:after {
+  clip-path: polygon(0 0, 100% 50%, 0% 100%);
+  animation-name: sh3-2;
+}
+
+.sp-74 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  background: conic-gradient(
+      from -45deg at top 20px left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 45deg at right 20px top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 135deg at bottom 20px left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from -135deg at left 20px top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    );
+  animation: sh4 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-75 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0);
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-76 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh6-0 1.5s infinite linear;
+}
+
+.sp-76:before,
+.sp-76:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  animation: sh6-1 1.5s infinite linear, sh6-2 1.5s infinite linear;
+}
+
+.sp-76:after {
+  --s: -1;
+  animation-direction: reverse;
+}
+
+.sp-77 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  position: relative;
+  background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0)
+      top,
+    conic-gradient(from -46deg at bottom, currentColor 92deg, #0000 0) bottom;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.sp-77:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+      from -135deg at top 0 left 22px,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 0
+    ),
+    conic-gradient(
+      from -45deg at right 0 top 22px,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 0
+    ),
+    conic-gradient(
+      from 45deg at bottom 0 right 22px,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 0
+    ),
+    conic-gradient(
+      from 135deg at left 0 bottom 20px,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 0
+    );
+  animation: sh7 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-78 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh8-0 1.5s infinite linear;
+}
+
+.sp-78:before,
+.sp-78:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  clip-path: polygon(0 0%, 100% 0, 100% 100%);
+  animation: inherit;
+  animation-name: sh8-1;
+}
+
+.sp-78:after {
+  --s: -1;
+}
+
+.sp-79 {
+  width: 40px;
+  height: 20px;
+  background: var(--primary-color);
+  position: relative;
+  animation: sh9-0 1.5s infinite linear;
+}
+
+.sp-79:before,
+.sp-79:after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  bottom: 100%;
+  width: 50%;
+  height: 100%;
+  animation: inherit;
+  animation-name: sh9-1;
+}
+
+.sp-79:before {
+  left: 0;
+  transform-origin: bottom left;
+  --s: -1;
+}
+
+.sp-79:after {
+  right: 0;
+  transform-origin: bottom right;
+}
+
+.sp-80 {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  animation: sh10-0 1.5s infinite linear;
+}
+
+.sp-80:before,
+.sp-80:after {
+  content: "";
+  width: 50%;
+  background: var(--primary-color);
+  clip-path: polygon(0 0, 100% 50%, 0% 100%);
+  animation: inherit;
+  animation-name: sh10-1;
+  transform-origin: bottom left;
+}
+
+.sp-80:before {
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: bottom right;
+  --s: -1;
+}
+
+.sp-131 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  display: grid;
+}
+
+.sp-131::before,
+.sp-131::after {
+  content: "";
+  grid-area: 1/1;
+  background: currentColor;
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+  animation: sp1 2s infinite;
+}
+
+.sp-131::after {
+  animation-delay: -1.5s;
+  --s: 90deg;
+}
+
+.sp-132 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  background: repeating-conic-gradient(
+    from -47deg,
+    #0000 0deg,
+    currentColor 1deg 91deg,
+    #0000 94deg 180deg
+  );
+  display: flex;
+  animation: sp2-0 2s infinite linear;
+}
+
+.sp-132::before,
+.sp-132::after {
+  content: "";
+  flex: 1;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  animation: sp2 1s infinite alternate;
+  transform-origin: bottom left;
+}
+
+.sp-132::after {
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  transform-origin: top right;
+}
+
+.sp-133 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  display: grid;
+}
+
+.sp-133::before,
+.sp-133::after {
+  content: "";
+  grid-area: 1/1;
+  background: currentColor;
+  clip-path: polygon(0 0, 101% 0, 0 100%);
+  animation: sp3 2s infinite;
+}
+
+.sp-133::after {
+  --s: -1, -1;
+}
+
+.sp-134 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  background: conic-gradient(currentColor 0 270deg, #0000 0);
+  border-radius: 50%;
+  animation: sp4-0 4s infinite linear;
+}
+
+.sp-134::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 50%;
+  border-top-left-radius: 100px;
+  background: currentColor;
+  animation: sp4 0.5s infinite alternate;
+}
+
+.sp-135 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transform-origin: 50% 125%;
+  animation: sp5-0 1.5s infinite linear;
+}
+
+.sp-135:before,
+.sp-135:after {
+  content: "";
+  flex: 1;
+  background: var(--primary-color);
+  animation: inherit;
+  transform-origin: bottom left;
+  animation-name: sp5-1;
+}
+
+.sp-135:before {
+  transform-origin: bottom right;
+  --s: -1;
+}
+
+.sp-136 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  position: relative;
+  background: linear-gradient(currentColor 0 0) center/100% 10px,
+    linear-gradient(currentColor 0 0) center/10px 100%;
+  background-repeat: no-repeat;
+}
+
+.sp-136:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: 15.5px 15.5px;
+  background-repeat: no-repeat;
+  animation: sp6 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-137 {
+  width: 40px;
+  height: 60px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.sp-137::before,
+.sp-137::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
+  animation: sp7 2s infinite;
+}
+
+.sp-137::after {
+  --s: -1, -1;
+}
+
+.sp-138 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  position: relative;
+  background: radial-gradient(10px, currentColor 94%, #0000);
+}
+
+.sp-138:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(9px at bottom right, #0000 94%, currentColor) top
+      left,
+    radial-gradient(9px at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(9px at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(9px at top left, #0000 94%, currentColor) bottom right;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  animation: sp8 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-139 {
+  width: 40px;
+  height: 20px;
+  background: var(--primary-color);
+  position: relative;
+  animation: sp9-0 1.5s infinite linear;
+}
+
+.sp-139:before,
+.sp-139:after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  bottom: 100%;
+  width: 50%;
+  height: 100%;
+  animation: inherit;
+  animation-name: sp9-1;
+}
+
+.sp-139:before {
+  left: 0;
+  --s: -1, 1;
+}
+
+.sp-139:after {
+  right: 0;
+}
+
+.sp-140 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transform-origin: 0% 150%;
+  animation: sp10-0 2s infinite linear;
+}
+
+.sp-140:before,
+.sp-140:after {
+  content: "";
+  flex: 1;
+  background: var(--primary-color);
+  animation: sp10-1 1s infinite linear alternate;
+  border-radius: 100px 0 0 100px;
+  transform-origin: 100% 100%;
+}
+
+.sp-140:after {
+  border-radius: 0 100px 100px 0;
+  transform-origin: 0% 100%;
+  --s: -1;
+}
+
+.sp-191 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.sp-191:before,
+.sp-191:after {
+  content: "";
+  flex: 1;
+  background: var(--primary-color);
+  animation: sp1 2s infinite;
+  border-radius: 100px 0 0 100px;
+  transform-origin: top right;
+  transform: translateY(calc(var(--s, 1) * 0%)) rotate(0);
+}
+
+.sp-191:after {
+  transform-origin: bottom left;
+  border-radius: 0 100px 100px 0;
+  --s: -1;
+}
+
+.sp-192 {
+  width: 36px;
+  height: 36px;
+  color: var(--primary-color);
+  background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0);
+  position: relative;
+  animation: sp2-0 2s infinite linear;
+}
+
+.sp-192:before,
+.sp-192:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform-origin: top right;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  inset: auto 100% 0 auto;
+  animation: sp2-1 1s infinite linear alternate;
+}
+
+.sp-192:after {
+  inset: auto auto 0 100%;
+  transform-origin: top left;
+  --s: -1;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.sp-193 {
+  width: 36px;
+  height: 36px;
+  color: var(--primary-color);
+  background: linear-gradient(45deg, #0000 24%, currentColor 0 76%, #0000 0);
+  position: relative;
+  animation: sp3-0 1.5s infinite;
+}
+
+.sp-193:before,
+.sp-193:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform-origin: top left;
+  clip-path: polygon(-2px 0, 0 -1px, 100% 100%, -2px 100%);
+  inset: auto auto 0 0;
+  animation: sp3-1 1.5s infinite;
+}
+
+.sp-193:after {
+  inset: 0 0 auto auto;
+  transform-origin: bottom right;
+  clip-path: polygon(
+    0 0,
+    calc(100% + 2px) 0,
+    calc(100% + 2px) 100%,
+    100% calc(100% + 1px)
+  );
+}
+
+.sp-194 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+}
+
+.sp-194:before,
+.sp-194:after {
+  content: "";
+  background: var(--primary-color);
+  transform-origin: left;
+  animation: sp4 2s infinite;
+}
+
+.sp-194:before {
+  transform-origin: right;
+  --s: -1;
+}
+
+.sp-195 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.sp-195:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+        from 0deg,
+        #0000,
+        currentColor 1deg 120deg,
+        #0000 121deg
+      )
+      top right,
+    conic-gradient(from 120deg, #0000, currentColor 1deg 120deg, #0000 121deg)
+      bottom,
+    conic-gradient(from 240deg, #0000, currentColor 1deg 120deg, #0000 121deg)
+      top left;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  animation: sp5 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-196 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.sp-196::before,
+.sp-196::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(currentColor 0 0) 0 calc(var(--s, 0) * -100%) /
+      100% calc(100% / 3),
+    repeating-linear-gradient(90deg, currentColor 0 25%, #0000 0 50%)
+      calc(var(--s, 0) * 100%) 50% / calc(4 * 100% / 3) calc(100% / 3);
+  background-repeat: no-repeat;
+  animation: sp6 2s infinite;
+}
+
+.sp-196::after {
+  --s: -1;
+}
+
+.sp-197 {
+  width: 50px;
+  height: calc(50px * 0.866);
+  position: relative;
+  background: conic-gradient(
+    from 120deg at 50% 64%,
+    #0000,
+    var(--primary-color) 1deg 120deg,
+    #0000 121deg
+  );
+  transform-origin: 50% 50%;
+  animation: sp7-0 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.sp-197:before,
+.sp-197:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transform-origin: 50% 66%;
+  animation: sp7-1 1.5s infinite;
+}
+
+.sp-197:after {
+  --s: -1;
+}
+
+.sp-198 {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-color);
+  background: currentColor;
+  position: relative;
+  transform-origin: top right;
+  animation: sp8-0 2s infinite linear;
+}
+
+.sp-198:before,
+.sp-198:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  transform-origin: bottom right;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  inset: auto auto 100% 0;
+  animation: sp8-1 1s infinite linear alternate;
+}
+
+.sp-198:after {
+  inset: auto auto 0 100%;
+  transform-origin: top left;
+  --s: -1;
+}
+
+.sp-199 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) left 20px top 0,
+    linear-gradient(currentColor 0 0) top 20px right 0,
+    linear-gradient(currentColor 0 0) right 20px bottom 0,
+    linear-gradient(currentColor 0 0) bottom 20px left 0;
+  background-size: calc(100% / 3) calc(100% / 3);
+  background-repeat: no-repeat;
+  animation: sp9-1 0.75s infinite alternate linear, sp9-2 1.5s infinite;
+}
+
+.sp-200 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: sh10-0 1.5s infinite linear;
+}
+
+.sp-200:before,
+.sp-200:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  animation: inherit;
+  animation-name: sh10-1;
+}
+
+.sp-200:after {
+  transform-origin: bottom right;
+  --s: 1;
+}
+
+.sp-281 {
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 50%, var(--c) 0 100%, var(--c) 50% 0,
+    var(--c) 50% 50%, var(--c) 50% 100%, var(--c) 100% 0, var(--c) 100% 50%,
+    var(--c) 100% 100%;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  animation: sh1 0.5s infinite alternate;
+}
+
+.sp-282 {
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
+    var(--c), var(--c), var(--c);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  animation: sh2-1 1s infinite, sh2-2 1s infinite;
+}
+
+.sp-283 {
+  height: 45px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) left, var(--c) center, var(--c) right;
+  background-size: 16px 100%;
+  background-repeat: no-repeat;
+  animation: sh3-1 1.5s infinite, sh3-2 1.5s infinite;
+}
+
+.sp-284 {
+  height: 60px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: sh4-1 2s infinite alternate, sh4-2 2s infinite alternate;
+}
+
+.sp-285 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+
+.sp-285:before,
+.sp-285:after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: var(--primary-color);
+  -webkit-mask: repeating-linear-gradient(#000 0 5px, #0000 0 10px);
+  animation: sh5 1.5s infinite;
+}
+
+.sp-285:after {
+  -webkit-mask: repeating-linear-gradient(#0000 0 5px, #000 0 10px);
+  --s: -1;
+}
+
+.sp-286 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+
+.sp-286:before,
+.sp-286:after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: var(--primary-color);
+  -webkit-mask: repeating-linear-gradient(#000 0 10px, #0000 0 20px);
+}
+
+.sp-286:after {
+  -webkit-mask: repeating-linear-gradient(#0000 0 10px, #000 0 20px);
+  animation: sh6 1.5s infinite;
+}
+
+.sp-287 {
+  width: 60px;
+  height: calc(0.866 * 60px);
+  color: var(--primary-color);
+  --c1: conic-gradient(
+    from 149deg at top,
+    #0000,
+    currentColor 2deg 59deg,
+    #0000 61deg
+  );
+  --c2: conic-gradient(
+    from -31deg at bottom,
+    #0000,
+    currentColor 1deg 61deg,
+    #0000 63deg
+  );
+  background: var(--c1) top, var(--c1) bottom right, var(--c2) bottom,
+    var(--c1) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: sh7 1s infinite;
+}
+
+.sp-288 {
+  width: 60px;
+  height: calc(0.866 * 60px);
+  color: var(--primary-color);
+  display: grid;
+  animation: sp8-0 6s infinite linear;
+}
+
+.sp-288:before,
+.sp-288:after {
+  content: "";
+  grid-area: 1/1;
+}
+
+.sp-288:before {
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  background: conic-gradient(from -30deg, #0000 60deg, currentColor 0);
+}
+
+.sp-288:after {
+  background: conic-gradient(from -30deg, currentColor 60deg, #0000 0);
+  animation: sp8 0.5s infinite alternate;
+}
+
+.sp-289 {
+  width: 50px;
+  height: 50px;
+  color: var(--primary-color);
+  background: currentColor;
+  border-radius: 50%;
+  position: relative;
+}
+
+.sp-289:before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(
+        farthest-side at bottom right,
+        #0000 94%,
+        currentColor 96%
+      )
+      0 0,
+    radial-gradient(farthest-side at bottom left, #0000 94%, currentColor 96%)
+      100% 0,
+    radial-gradient(farthest-side at top left, #0000 94%, currentColor 96%) 100%
+      100%,
+    radial-gradient(farthest-side at top right, #0000 94%, currentColor 96%) 0
+      100%;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation: sh9-1 1s infinite, sh9-2 1s infinite;
+}
+
+.sp-290 {
+  width: 50px;
+  height: 50px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.sp-290:before,
+.sp-290:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 25px 25px;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.sp-290:before {
+  background-image: radial-gradient(
+      farthest-side at top left,
+      currentColor 96%,
+      #0000
+    ),
+    radial-gradient(farthest-side at top right, currentColor 96%, #0000),
+    radial-gradient(farthest-side at bottom right, currentColor 96%, #0000),
+    radial-gradient(farthest-side at bottom left, currentColor 96%, #0000);
+  animation: sh10-1 1s infinite;
+}
+
+.sp-290:after {
+  background-image: radial-gradient(
+      farthest-side at top left,
+      #0000 94%,
+      currentColor 96%
+    ),
+    radial-gradient(farthest-side at top right, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at bottom right, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at bottom left, #0000 94%, currentColor 96%);
+  animation: sh10-2 1s infinite;
+}
+
+.sp-81 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  display: grid;
+  animation: h1 4s infinite linear;
+}
+
+.sp-81::before,
+.sp-81::after {
+  content: "";
+  grid-area: 1/1;
+  margin: auto;
+  width: 70.7%;
+  height: 70.7%;
+  border: 2px solid var(--primary-color);
+  animation: inherit;
+}
+
+.sp-81::after {
+  width: 50%;
+  height: 50%;
+  border: 2px solid var(--primary-color);
+  animation-duration: 2s;
+}
+
+.sp-82 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  position: relative;
+  transform-origin: left;
+  animation: h2 1s infinite linear;
+}
+
+.sp-82::before,
+.sp-82::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  transform-origin: 50% calc(100% - 4px);
+  animation: inherit;
+}
+
+.sp-82::after {
+  inset: auto 0 calc(100% + 2px);
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  transform-origin: 50% calc(200% - 2px);
+}
+
+.sp-83 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  background: conic-gradient(
+      from -90deg at calc(100% - 2px) calc(100% - 2px),
+      #0000 0 90deg,
+      var(--primary-color) 0
+    ),
+    conic-gradient(
+      from -90deg at calc(100% - 2px) calc(100% - 2px),
+      #0000 0 90deg,
+      var(--primary-color) 0
+    );
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation: h3 1s infinite;
+}
+
+.sp-84 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  background: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3px),
+      var(--primary-color) calc(100% - 2px) 98%,
+      #0000
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3px),
+      var(--primary-color) calc(100% - 2px) 98%,
+      #0000
+    );
+  background-size: 23px 23px;
+  background-position: 0 0, 12px 12px;
+  animation: h4 1s infinite;
+}
+
+.sp-85 {
+  width: 50px;
+  height: calc(50px * 0.866);
+  display: grid;
+  background: linear-gradient(
+        to bottom left,
+        #0000 calc(50% - 1px),
+        var(--primary-color) 0 calc(50% + 1px),
+        #0000 0
+      )
+      right/50% 100%,
+    linear-gradient(
+        to bottom right,
+        #0000 calc(50% - 1px),
+        var(--primary-color) 0 calc(50% + 1px),
+        #0000 0
+      )
+      left / 50% 100%,
+    linear-gradient(var(--primary-color) 0 0) bottom/100% 2px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 66%;
+  animation: h5 4s infinite linear;
+}
+
+.sp-85::before,
+.sp-85::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+
+.sp-85::after {
+  animation-duration: 2s;
+}
+
+.sp-86 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  background: linear-gradient(
+        90deg,
+        var(--primary-color) 2px,
+        #0000 0 calc(100% - 2px),
+        var(--primary-color) 0
+      )
+      center/100% 14px,
+    linear-gradient(
+        0deg,
+        var(--primary-color) 2px,
+        #0000 0 calc(100% - 2px),
+        var(--primary-color) 0
+      )
+      center/14px 100%,
+    linear-gradient(var(--primary-color) 0 0) center/100% 2px,
+    linear-gradient(var(--primary-color) 0 0) center/2px 100%;
+  background-repeat: no-repeat;
+  animation: h6 4s infinite linear;
+}
+
+.sp-86::before,
+.sp-86::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+
+.sp-86::after {
+  animation-duration: 2s;
+}
+
+.sp-87 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  background: repeating-conic-gradient(
+      #0000 0 90deg,
+      var(--primary-color) 0 180deg
+    ),
+    repeating-conic-gradient(var(--primary-color) 0 90deg, #0000 0 180deg);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation: h7 2s infinite;
+}
+
+.sp-88 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  background: radial-gradient(farthest-side, var(--primary-color) 90%, #0000),
+    radial-gradient(farthest-side, #0000 90%, var(--primary-color));
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation: h8 2s infinite;
+}
+
+.sp-89 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #0000,
+    var(--primary-color) 1deg 18deg,
+    #0000 20deg 36deg
+  );
+  animation: h9 4s infinite linear;
+}
+
+.sp-89::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: inherit;
+  animation: inherit;
+}
+
+.sp-90 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+
+.sp-90::before,
+.sp-90::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #0000,
+    var(--primary-color) 1deg 18deg,
+    #0000 20deg 36deg
+  );
+  -webkit-mask: repeating-radial-gradient(
+    farthest-side,
+    #000 0 10%,
+    #0000 0 20%
+  );
+  animation: h10 4s infinite linear;
+}
+
+.sp-90::after {
+  -webkit-mask: repeating-radial-gradient(
+    farthest-side,
+    #0000 0 10%,
+    #000 0 20%
+  );
+  animation-direction: reverse;
+}
+
+.sp-151 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: grid;
+  animation: h1 1.5s infinite linear;
+  transform-origin: 50% 80%;
+}
+
+.sp-151:before,
+.sp-151:after {
+  content: "";
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 1s;
+  transform-origin: inherit;
+}
+
+.sp-151:after {
+  --s: -1;
+}
+
+.sp-152 {
+  width: 60px;
+  height: 25px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: grid;
+  animation: h2 2s infinite linear;
+}
+
+.sp-152:before,
+.sp-152:after {
+  content: "";
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 3s;
+}
+
+.sp-152:after {
+  --s: -1;
+}
+
+.sp-153 {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  background: radial-gradient(
+        farthest-side at bottom,
+        #0000 calc(100% - 5px),
+        var(--primary-color) calc(100% - 4px) 96%,
+        #0000
+      )
+      0 0,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 5px),
+        var(--primary-color) calc(100% - 4px) 96%,
+        #0000
+      )
+      100% 100%;
+  background-size: calc(50% + 2px) 50%;
+  background-repeat: no-repeat;
+  animation: h3 2s infinite linear;
+}
+
+.sp-153:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+.sp-154 {
+  width: 60px;
+  height: 30px;
+  display: grid;
+  background: radial-gradient(
+        farthest-side at bottom,
+        #0000 calc(100% - 5px),
+        var(--primary-color) calc(100% - 4px) 96%,
+        #0000
+      )
+      0 0,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 5px),
+        var(--primary-color) calc(100% - 4px) 96%,
+        #0000
+      )
+      100% 100%;
+  background-size: calc(50% + 2px) 50%;
+  background-repeat: no-repeat;
+  animation: h4 1.5s infinite linear;
+}
+
+.sp-154:before,
+.sp-154:after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+
+.sp-154:after {
+  --s: -1;
+}
+
+.sp-155 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  background: conic-gradient(
+      from 180deg at 50% calc(100% - 2px),
+      var(--primary-color) 90deg,
+      #0000 0
+    ),
+    conic-gradient(
+      from 180deg at 50% calc(100% - 2px),
+      var(--primary-color) 90deg,
+      #0000 0
+    );
+  background-position: 0 0, 8px 0;
+  background-size: 16px 9.6px;
+  animation: h5 1s infinite;
+}
+
+.sp-156 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+}
+
+.sp-156::before {
+  content: "";
+  position: absolute;
+  inset: -48px;
+  background: conic-gradient(
+      from 180deg at 50% calc(100% - 2px),
+      var(--primary-color) 90deg,
+      #0000 0
+    ),
+    conic-gradient(
+      from 180deg at 50% calc(100% - 2px),
+      var(--primary-color) 90deg,
+      #0000 0
+    );
+  background-position: 0 0, 8px 0;
+  background-size: 16px 9.6px;
+  animation: h6 2s infinite;
+}
+
+.sp-157 {
+  width: 30px;
+  height: calc(30px * 1.732);
+  display: grid;
+  background: linear-gradient(var(--primary-color) 0 0) top / 100% 1px,
+    linear-gradient(var(--primary-color) 0 0) bottom/100% 1px,
+    linear-gradient(
+        to bottom right,
+        #0000 calc(50% - 2px),
+        var(--primary-color) calc(50% - 1px),
+        #0000 50%
+      )
+      top/100% calc(100% + 2px),
+    linear-gradient(
+        to bottom left,
+        #0000 calc(50% - 2px),
+        var(--primary-color) calc(50% - 1px),
+        #0000 50%
+      )
+      top/100% calc(100% + 2px);
+  background-repeat: no-repeat;
+  animation: h7 4s infinite linear;
+}
+
+.sp-157::before,
+.sp-157::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+
+.sp-157::after {
+  animation-duration: 2s;
+}
+
+.sp-158 {
+  width: 25px;
+  height: 50px;
+  display: grid;
+  background: linear-gradient(var(--primary-color) 0 0) top/100% 2px,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 2px),
+        var(--primary-color) calc(100% - 1px),
+        #0000
+      )
+      top,
+    linear-gradient(var(--primary-color) 0 0) bottom/100% 2px,
+    radial-gradient(
+        farthest-side at bottom,
+        #0000 calc(100% - 2px),
+        var(--primary-color) calc(100% - 1px),
+        #0000
+      )
+      bottom;
+  background-size: 100% 1px, 100% 50%;
+  background-repeat: no-repeat;
+  animation: h8 4s infinite linear;
+}
+
+.sp-158::before,
+.sp-158::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+
+.sp-158::after {
+  animation-duration: 2s;
+}
+
+.sp-159 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+
+.sp-159::before,
+.sp-159::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    farthest-side,
+    #0000 0%,
+    var(--primary-color) 1% 10%,
+    #0000 11% 30%
+  );
+  -webkit-mask: repeating-conic-gradient(#000 0 36deg, #0000 0 72deg);
+  animation: h9 4s infinite linear;
+}
+
+.sp-159::after {
+  -webkit-mask: repeating-conic-gradient(#0000 0 36deg, #000 0 72deg);
+  animation-direction: reverse;
+}
+
+.sp-160 {
+  width: 50px;
+  height: 50px;
+  --g: #0000 calc(100% - 5px), var(--primary-color) calc(100% - 3px) 93%, #0000;
+  background: radial-gradient(farthest-side at bottom, var(--g)) top / 100% 50%,
+    radial-gradient(farthest-side at top, var(--g)) bottom 18% right 0 /80% 40%,
+    radial-gradient(farthest-side at bottom, var(--g)) left 50% top 30%/60% 30%,
+    radial-gradient(farthest-side at top, var(--g)) right 34% bottom 37%/40% 20%,
+    radial-gradient(farthest-side at bottom, var(--g)) left 52% top 43%/24% 12%;
+  background-repeat: no-repeat;
+  animation: h10 1s infinite linear;
+}
+
+.sp-101 {
+  width: 80px;
+  height: 80px;
+  color: var(--primary-color);
+  background: conic-gradient(
+        from 165deg at top,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      top,
+    conic-gradient(
+        from 75deg at left,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      left,
+    conic-gradient(
+        from -15deg at bottom,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      bottom,
+    conic-gradient(
+        from -105deg at right,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      right;
+  background-size: 100% 50%, 50% 100%;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  background-repeat: no-repeat;
+  animation: sh1 1.5s infinite linear;
+}
+
+.sp-102 {
+  width: 80px;
+  height: 80px;
+  color: var(--primary-color);
+  background: conic-gradient(
+        from 165deg at top,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      top,
+    conic-gradient(
+        from 75deg at left,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      left,
+    conic-gradient(
+        from -15deg at bottom,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      bottom,
+    conic-gradient(
+        from -105deg at right,
+        #0000,
+        currentColor 1deg 30deg,
+        #0000 31deg
+      )
+      right;
+  background-size: 100% 50%, 50% 100%;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  background-repeat: no-repeat;
+  animation: sh2 1.5s infinite linear;
+}
+
+.sp-102:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.sp-103 {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  color: var(--primary-color);
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: sh3 1.5s infinite linear;
+}
+
+.sp-103:before,
+.sp-103:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(
+        farthest-side at bottom left,
+        currentColor 94%,
+        #0000
+      )
+      top left,
+    radial-gradient(farthest-side at top right, currentColor 94%, #0000) bottom
+      right;
+  background-size: 63% 50%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(65% 110% at bottom left, #0000 94%, #000) top
+      left,
+    radial-gradient(65% 110% at top right, #0000 94%, #000) bottom right;
+  -webkit-mask-size: 62% 50%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.sp-103:after {
+  transform: rotate(90deg);
+}
+
+.sp-104 {
+  width: calc(80px * 0.707);
+  height: calc(80px * 0.707);
+  background: var(--primary-color);
+  clip-path: polygon(
+    0 0,
+    50% 15%,
+    100% 0,
+    85% 50%,
+    100% 100%,
+    50% 85%,
+    0 100%,
+    15% 50%
+  );
+  -webkit-mask: radial-gradient(circle closest-side, #0000 92%, #000) top / 100%
+      33.4%,
+    radial-gradient(circle closest-side, #0000 92%, #000) left / 33.4% 33.4%,
+    radial-gradient(circle 5px, #0000 92%, #000) center/33.3% 33.3%,
+    radial-gradient(circle closest-side, #0000 92%, #000) right / 33.4% 33.4%,
+    radial-gradient(circle closest-side, #0000 92%, #000) bottom/100% 33.4%;
+  -webkit-mask-repeat: no-repeat;
+  animation: sh4 1.5s infinite linear;
+}
+
+.sp-105 {
+  width: 80px;
+  height: 80px;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) center/100% 15px,
+    linear-gradient(currentColor 0 0) center/15px 100%,
+    radial-gradient(circle 15px, currentColor 94%, #0000);
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  clip-path: polygon(
+    0 30px,
+    calc(100% - 30px) 0,
+    100% calc(100% - 30px),
+    30px 100%
+  );
+  animation: sh5 1.5s infinite linear;
+}
+
+.sp-106 {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  color: var(--primary-color);
+  background: conic-gradient(
+        from -153deg at right,
+        #0000,
+        currentColor 1deg 126deg,
+        #0000 127deg
+      )
+      calc(50% + 5px) 0 /10px 50%,
+    conic-gradient(
+        from 27deg at left,
+        #0000,
+        currentColor 1deg 126deg,
+        #0000 127deg
+      )
+      calc(50% - 5px) 100%/10px 50%,
+    linear-gradient(to top right, currentColor 50%, #0000 0%) calc(50% + 10px)
+      calc(50% - 10px) / 20px 20px,
+    linear-gradient(to bottom left, currentColor 50%, #0000 0%) calc(50% - 10px)
+      calc(50% + 10px) / 20px 20px;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: sh6 1.5s infinite linear;
+}
+
+.sp-106:before,
+.sp-106:after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  transform: rotate(60deg);
+}
+
+.sp-106:after {
+  transform: rotate(120deg);
+}
+
+.sp-107 {
+  width: 80px;
+  height: 80px;
+  color: var(--primary-color);
+  background: radial-gradient(
+        150% 150% at left -40% top -40%,
+        #0000 98%,
+        currentColor
+      )
+      left top,
+    radial-gradient(150% 150% at right -40% top -40%, #0000 98%, currentColor)
+      right top,
+    radial-gradient(150% 150% at left -40% bottom -40%, #0000 98%, currentColor)
+      left bottom,
+    radial-gradient(
+        150% 150% at right -40% bottom -40%,
+        #0000 98%,
+        currentColor
+      )
+      right bottom;
+  background-size: 50.3% 50.3%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: sh7 1.5s infinite linear;
+}
+
+.sp-108 {
+  width: 80px;
+  height: 80px;
+  --c: var(--primary-color) 91%, #0000;
+  background: radial-gradient(30% 50% at -3px 55%, var(--c)) top right,
+    radial-gradient(30% 50% at -3px 45%, var(--c)) bottom right,
+    radial-gradient(30% 50% at calc(100% + 3px) 55%, var(--c)) top left,
+    radial-gradient(30% 50% at calc(100% + 3px) 45%, var(--c)) bottom left,
+    radial-gradient(50% 30% at 45% calc(100% + 3px), var(--c)) top right,
+    radial-gradient(50% 30% at 45% -3px, var(--c)) bottom right,
+    radial-gradient(50% 30% at 55% calc(100% + 3px), var(--c)) top left,
+    radial-gradient(50% 30% at 55% -3px, var(--c)) bottom left;
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: sh8 1.5s infinite linear;
+}
+
+.sp-109 {
+  width: 80px;
+  height: 80px;
+  --c: var(--primary-color) 98%, #0000;
+  background: radial-gradient(50% 70% at 50% 120%, var(--c)) top,
+    radial-gradient(70% 50% at -20% 50%, var(--c)) right,
+    radial-gradient(50% 70% at 50% -20%, var(--c)) bottom,
+    radial-gradient(70% 50% at 120% 50%, var(--c)) left;
+  background-size: 100% 50.1%, 50.1% 100%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: sh9 1.5s infinite linear;
+}
+
+.sp-110 {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  color: var(--primary-color);
+  background: radial-gradient(circle 16px, currentColor 94%, #0000);
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
+  animation: sh10 1.5s infinite linear;
+}
+
+.sp-110:before,
+.sp-110:after {
+  content: "";
+  grid-area: 1/1;
+  background: radial-gradient(
+        farthest-side at bottom right,
+        currentColor 94%,
+        #0000
+      )
+      top right,
+    radial-gradient(farthest-side at top left, currentColor 94%, #0000) bottom
+      left;
+  background-size: 40% 45%;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(60% 100% at bottom right, #0000 94%, #000) top
+      right,
+    radial-gradient(60% 100% at top left, #0000 94%, #000) bottom left;
+  -webkit-mask-size: 40% 45%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.sp-110:after {
+  transform: rotate(90deg);
+}
+
+.sp-121 {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  transform: perspective(150px) rotateX(0);
+  animation: f1 1s infinite;
+}
+
+.sp-122 {
+  width: 40px;
+  height: 40px;
+  transform: perspective(150px) rotateX(0);
+  animation: f1-1 2s infinite linear, f1-2 1s infinite linear alternate;
+}
+
+.sp-123 {
+  width: 40px;
+  height: 40px;
+  transform: perspective(150px) rotateX(0) rotateY(0);
+  animation: f3-1 2s infinite linear, f3-2 3s infinite linear -0.5s;
+}
+
+.sp-124 {
+  width: 60px;
+  height: 60px;
+  animation: f4-0 2s infinite linear;
+}
+
+.sp-124::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  transform: perspective(150px) rotateX(0deg);
+  transform-origin: bottom;
+  animation: f4-1 0.5s infinite linear alternate,
+    f4-2 0.5s infinite linear alternate;
+}
+
+.sp-125 {
+  width: 60px;
+  height: 60px;
+  animation: f5-0 1s infinite linear;
+}
+
+.sp-125::before,
+.sp-125::after {
+  content: "";
+  position: absolute;
+  inset: 0 50% 50% 0;
+  transform: scale(var(--s, 1)) perspective(150px) rotateX(0deg);
+  transform-origin: bottom right;
+  animation: f5-1 0.5s infinite linear alternate,
+    f5-2 0.5s infinite linear alternate;
+}
+
+.sp-125::after {
+  --s: -1, -1;
+}
+
+.sp-126 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0);
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  animation: f6-0 1.5s infinite linear alternate, f6-0-0 3s infinite linear;
+}
+
+.sp-126::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+  transform-origin: bottom right;
+  animation: f6-1 1.5s infinite linear alternate;
+}
+
+.sp-127 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 0 100%;
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  animation: f7-0 1s infinite linear;
+}
+
+.sp-127::before,
+.sp-127::after {
+  content: "";
+  position: absolute;
+  inset: 0 50% 50% 0;
+  background: currentColor;
+  transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
+  transform-origin: bottom right;
+  animation: f7-1 0.5s infinite linear alternate;
+}
+
+.sp-127::after {
+  --s: -1, -1;
+}
+
+.sp-128 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  animation: f8-0 2s infinite linear;
+}
+
+.sp-128::before,
+.sp-128::after {
+  content: "";
+  flex: 1;
+  animation: f8-1 1s infinite linear alternate, f8-2 2s infinite linear -0.5s;
+}
+
+.sp-128::after {
+  --s: -1, -1;
+}
+
+.sp-129 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  border-radius: 50%;
+  background: linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0);
+  background-size: 50.1% 50.1%;
+  background-repeat: no-repeat;
+  animation: f9-0 1.5s infinite linear alternate,
+    f9-0-0 3s infinite linear alternate;
+}
+
+.sp-129::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  border-top-left-radius: 100px;
+  transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+  transform-origin: bottom right;
+  animation: f9-1 1.5s infinite linear alternate;
+}
+
+.sp-130 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  animation: f10-0 2s infinite linear;
+}
+
+.sp-130::before,
+.sp-130::after {
+  content: "";
+  flex: 1;
+  animation: f10-1 1s infinite linear alternate, f10-2 2s infinite linear -0.5s;
+}
+
+.sp-130::after {
+  --s: -1, -1;
+}
+
+.sp-251 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  animation: f1-0 2s infinite linear;
+}
+
+.sp-251::before,
+.sp-251::after {
+  content: "";
+  flex: 1;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  animation: f1-1 1s infinite linear alternate, f1-2 2s infinite linear -0.5s;
+}
+
+.sp-251::after {
+  --s: -1, -1;
+}
+
+.sp-252 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  animation: f2-0 4s infinite linear 0.5s;
+}
+
+.sp-252::before,
+.sp-252::after {
+  content: "";
+  flex: 1;
+  background: var(--primary-color);
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  animation: f2-1 1s infinite linear;
+}
+
+.sp-252::after {
+  transform: scale(-1);
+  animation: none;
+}
+
+.sp-253 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  animation: f3-0 4s infinite linear 0.5s;
+}
+
+.sp-253::before,
+.sp-253::after {
+  content: "";
+  flex: 1;
+  background: var(--primary-color);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 75%, 0 25%);
+  animation: f3-1 1s infinite linear;
+}
+
+.sp-253::after {
+  transform: scale(-1);
+  animation: none;
+}
+
+.sp-254 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+}
+
+.sp-254::before,
+.sp-254::after {
+  content: "";
+  flex: 1;
+  animation: f4 1.5s -0.25s infinite linear alternate both;
+}
+
+.sp-254::after {
+  --s: -1, -1;
+  animation-delay: 0.5s;
+}
+
+.sp-255 {
+  width: 80px;
+  height: 40px;
+  display: flex;
+}
+
+.sp-255::before,
+.sp-255::after {
+  content: "";
+  flex: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  background: var(--primary-color);
+  animation: f5-1 1s infinite linear alternate, f5-2 2s infinite linear -0.5s;
+}
+
+.sp-255::after {
+  --s: -1, -1;
+}
+
+.sp-256 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) right / 51% 100%,
+    linear-gradient(currentColor 0 0) bottom / 100% 51%;
+  background-repeat: no-repeat;
+  animation: f6-0 2s infinite linear 0.25s;
+}
+
+.sp-256::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  animation: f6-1 0.5s infinite linear;
+}
+
+.sp-257 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  color: var(--primary-color);
+  background: linear-gradient(currentColor 0 0) right / 51% 100%,
+    linear-gradient(currentColor 0 0) bottom / 100% 51%;
+  background-repeat: no-repeat;
+  animation: f7-0 2s infinite linear 0.25s;
+}
+
+.sp-257::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: currentColor;
+  transform-origin: 10% 10%;
+  animation: f7-1 0.5s infinite linear;
+}
+
+.sp-258 {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  color: var(--primary-color);
+  --c: #0000 calc(100% - 20px), currentColor calc(100% - 19px) 98%, #0000;
+  background: radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
+    radial-gradient(farthest-side at top, var(--c)) bottom/100% 50%;
+  background-repeat: no-repeat;
+  animation: f8-0 2s infinite linear 0.25s;
+}
+
+.sp-258::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(farthest-side at bottom right, var(--c));
+  animation: f8-1 0.5s infinite linear;
+}
+
+.sp-259 {
+  width: 60px;
+  height: 60px;
+  display: grid;
+}
+
+.sp-259:before,
+.sp-259:after {
+  content: "";
+  grid-area: 1/1;
+  color: var(--primary-color);
+  animation: f9-1 1.5s infinite linear;
+}
+
+.sp-259:before {
+  margin: 5px 20px;
+  background: currentColor;
+}
+
+.sp-259:after {
+  border: solid;
+  border-width: 5px 20px;
+  --s: 0;
+}
+
+.sp-260 {
+  width: 60px;
+  height: 60px;
+  display: grid;
+}
+
+.sp-260:before,
+.sp-260:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    75% 25%,
+    0 0,
+    0 100%,
+    100% 100%,
+    25% 75%,
+    0 0
+  );
+  animation: f10 1.5s infinite linear;
+}
+
+.sp-260:after {
+  clip-path: polygon(0 0, 76% 24%, 100% 100%, 24% 76%);
+  --s: 0;
+}
+
+.sp-181 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --r1: radial-gradient(
+    farthest-side at bottom,
+    var(--primary-color) 93%,
+    #0000
+  );
+  --r2: radial-gradient(farthest-side at top, var(--primary-color) 93%, #0000);
+  background: var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2),
+    var(--c), var(--r1), var(--r2);
+  background-repeat: no-repeat;
+  animation: db1 1s infinite alternate;
+}
+
+.sp-182 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --r1: radial-gradient(
+    farthest-side at bottom,
+    var(--primary-color) 93%,
+    #0000
+  );
+  --r2: radial-gradient(farthest-side at top, var(--primary-color) 93%, #0000);
+  background: var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2),
+    var(--c), var(--r1), var(--r2);
+  background-repeat: no-repeat;
+  animation: db2 1s infinite alternate;
+}
+
+.sp-183 {
+  width: 40px;
+  height: 26px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 8px calc(100% - 4px);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.sp-183:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  left: 0;
+  top: 0;
+  animation: db3-1 1.5s linear infinite alternate,
+    db3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+.sp-184 {
+  width: 40px;
+  height: 20px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 93%, #0000);
+  background: var(--c) 0 0, var(--c) 50% 0, var(--c) 100% 0;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: db4-0 1s linear infinite alternate;
+}
+
+.sp-184:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: var(--primary-color);
+  left: 0;
+  top: 0;
+  animation: db4-1 1s linear infinite alternate,
+    db4-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+.sp-185 {
+  width: 40px;
+  height: 30px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 100%/8px 30px, var(--c) 50% 100%/8px 20px,
+    var(--c) 100% 100%/8px 10px;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: inset(-100% 0);
+}
+
+.sp-185:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  left: -16px;
+  top: 0;
+  animation: db5-1 2s linear infinite,
+    db5-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+.sp-186 {
+  width: 40px;
+  height: 20px;
+  --c: radial-gradient(farthest-side, var(--primary-color) 93%, #0000);
+  background: var(--c) 0 0, var(--c) 50% 0;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: inset(-200% -100% 0 0);
+  animation: db6-0 1.5s linear infinite;
+}
+
+.sp-186:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: var(--primary-color);
+  left: -16px;
+  top: 0;
+  animation: db6-1 1.5s linear infinite,
+    db6-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+.sp-186:after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: db6-3 1.5s linear infinite;
+}
+
+.sp-187 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 0, var(--c) 50% 100%,
+    var(--c) 100% 0, var(--c) 100% 100%;
+  background-size: 8px 50%;
+  background-repeat: no-repeat;
+  animation: db7-0 1s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-187:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  top: calc(50% - 4px);
+  left: -8px;
+  animation: inherit;
+  animation-name: db7-1;
+}
+
+.sp-188 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 0, var(--c) 50% 100%,
+    var(--c) 100% 0, var(--c) 100% 100%;
+  background-size: 8px 50%;
+  background-repeat: no-repeat;
+  animation: db8-0 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-188:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  top: calc(50% - 4px);
+  left: -8px;
+  animation: inherit;
+  animation-name: db8-1;
+}
+
+.sp-189 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c) 0 0, var(--c) 0 100%, var(--c) 50% 0, var(--c) 50% 100%,
+    var(--c) 100% 0, var(--c) 100% 100%;
+  background-size: 8px 50%;
+  background-repeat: no-repeat;
+  animation: db9-0 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-189:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  top: calc(50% - 4px);
+  left: -8px;
+  animation: inherit;
+  animation-name: db9-1;
+}
+
+.sp-190 {
+  width: 70px;
+  height: 30px;
+  color: var(--primary-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.sp-190::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  inset: 0;
+  margin: auto;
+  background: var(--primary-color);
+  transform-origin: bottom;
+  animation: db10-1 3s infinite;
+}
+
+.sp-190::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  bottom: calc(50% - 4px);
+  background: var(--primary-color);
+  animation: db10-2 3s infinite;
+}
+
+.sp-241 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-size: 8px calc(50% + 8px);
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(
+      circle closest-side,
+      #0000 92%,
+      var(--primary-color)
+    )
+    0/8px 100%;
+  animation: db1 0.75s infinite alternate linear;
+}
+
+.sp-242 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(circle closest-side, #0000 92%, var(--primary-color));
+  background: var(--c) 0 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+  background-size: 8px calc(50% + 8px);
+  background-repeat: no-repeat;
+  -webkit-mask: var(--m), var(--m), var(--m);
+  -webkit-mask-size: 8px 150%;
+  -webkit-mask-repeat: no-repeat;
+  animation: db2 1s infinite alternate;
+}
+
+.sp-243 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+  background-size: 8px 12px, 8px 8px;
+  background-repeat: no-repeat;
+  animation: db3 1s infinite alternate;
+}
+
+.sp-244 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+  background-size: 8px 15px, 8px 8px;
+  background-repeat: no-repeat;
+  animation: db4 1s infinite alternate;
+}
+
+.sp-245 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+  background-size: 8px 15px, 8px 8px;
+  background-repeat: no-repeat;
+  animation: db5 2s infinite;
+}
+
+.sp-246 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+  background-size: 8px 12px, 8px 8px;
+  background-repeat: no-repeat;
+  animation: db6 1s infinite linear alternate;
+}
+
+.sp-247 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--c), var(--m), var(--c), var(--m), var(--c), var(--m);
+  background-size: 8px 12px, 8px 8px;
+  background-repeat: no-repeat;
+  animation: db7 1s infinite linear;
+}
+
+.sp-248 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 92%, #0000);
+  background: var(--m) center / 12px 12px, var(--c) left 50% top -20px/8px 16px,
+    var(--c) left 50% bottom -20px/8px 16px,
+    var(--c) top 50% left -20px/16px 8px, var(--c) top 50% right -20px/16px 8px;
+  background-repeat: no-repeat;
+  animation: db8-1 1.5s infinite, db8-2 1.5s infinite;
+}
+
+.sp-249 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--m), var(--c);
+  background-size: 16px 8px, 10px 10px;
+  background-repeat: no-repeat;
+  animation: db9-1 0.5s infinite alternate, db9-2 4s infinite linear 0.5s;
+}
+
+.sp-250 {
+  width: 40px;
+  height: 40px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  --m: radial-gradient(farthest-side, var(--primary-color) 90%, #0000);
+  background: var(--c), var(--m), var(--c);
+  background-size: 16px 8px, 10px 10px;
+  background-repeat: no-repeat;
+  animation: db10-1 1s infinite linear, db10-2 4s infinite linear -0.4s;
+}
+
+.sp-221 {
+  width: 35px;
+  height: 35px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 100% 100%, var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation: l1 1s infinite alternate;
+}
+
+.sp-222 {
+  width: 35px;
+  height: 35px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 100% 100%, var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation: l2-1 2s infinite, l2-2 2s infinite;
+}
+
+.sp-223 {
+  width: 35px;
+  height: 35px;
+  color: var(--primary-color);
+  --c1: linear-gradient(
+    90deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  --c2: linear-gradient(
+    0deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  background: var(--c1), var(--c2), var(--c1), var(--c2);
+  background-size: 300% 4px, 4px 300%;
+  background-repeat: no-repeat;
+  animation: l3 1s infinite linear;
+}
+
+.sp-224 {
+  width: 80px;
+  height: 40px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
+    var(--c);
+  background-repeat: no-repeat;
+  animation: l4-1 1.5s infinite, l4-2 1.5s infinite;
+}
+
+.sp-225 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 50%, var(--c) right 0 bottom 20px, var(--c) 100% 0,
+    var(--c) 50% 0, var(--c) right 20px bottom 0, var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation: l5 1.5s infinite alternate;
+}
+
+.sp-226 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l6-1 2s infinite, l6-2 2s infinite;
+}
+
+.sp-227 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 38px, var(--c) right 18px bottom 18px,
+    var(--c) right 18px top 18px, var(--c) 18px 18px, var(--c) 18px 100%,
+    var(--c) 100% 100%, var(--c) 100% 0, var(--c) 0 0;
+  background-repeat: no-repeat;
+  animation: l7 1.5s infinite alternate;
+}
+
+.sp-228 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 38px, var(--c) right 18px bottom 18px,
+    var(--c) right 18px top 18px, var(--c) 18px 18px, var(--c) 18px 100%,
+    var(--c) 100% 100%, var(--c) 100% 0, var(--c) 0 0;
+  background-repeat: no-repeat;
+  animation: l8-1 2s infinite, l8-2 2s infinite;
+}
+
+.sp-229 {
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l9-1 1.5s infinite, l9-2 1.5s infinite;
+}
+
+.sp-230 {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  display: grid;
+}
+
+.sp-230::before,
+.sp-230::after {
+  content: "";
+  grid-area: 1/1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 100% 100%, var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation: l10-1 2s infinite linear, l10-2 2s infinite linear;
+}
+
+.sp-230::after {
+  margin: 10px;
+  transform: scale(-1);
+}
+
+.sp-231 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-231:before,
+.sp-231:after {
+  content: "";
+  grid-area: 1/1;
+  --c1: linear-gradient(
+    90deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  --c2: linear-gradient(
+    0deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  background: var(--c1), var(--c2), var(--c1), var(--c2);
+  background-size: 300% 4px, 4px 300%;
+  background-repeat: no-repeat;
+  animation: l1 1s infinite linear;
+}
+
+.sp-231:after {
+  margin: 10px;
+  transform: scaleX(-1);
+  animation-delay: -0.25s;
+}
+
+.sp-232 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-232:before,
+.sp-232:after {
+  content: "";
+  grid-area: 1/1;
+  margin: 0 0 15px 15px;
+  --c1: linear-gradient(
+    90deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  --c2: linear-gradient(
+    0deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  background: var(--c1), var(--c2), var(--c1), var(--c2);
+  background-size: 300% 4px, 4px 300%;
+  background-repeat: no-repeat;
+  animation: l2 1s infinite linear;
+}
+
+.sp-232:after {
+  margin: 15px 15px 0 0;
+  transform: scale(-1, -1);
+}
+
+.sp-233 {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  color: var(--primary-color);
+}
+
+.sp-233:before,
+.sp-233:after {
+  content: "";
+  margin: 0 -2px 0 0;
+  flex: 1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l3-1 1s infinite linear, l3-2 1s infinite linear;
+}
+
+.sp-233:after {
+  transform: scale(-1);
+  margin: 0 0 0 -2px;
+}
+
+.sp-234 {
+  width: 60px;
+  height: 30px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-234:before,
+.sp-234:after {
+  content: "";
+  grid-area: 1/1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l4-1 1s infinite linear, l4-2 1s infinite linear;
+}
+
+.sp-234:after {
+  transform: scale(-1);
+}
+
+.sp-235 {
+  width: 60px;
+  height: 20px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-235:before,
+.sp-235:after {
+  content: "";
+  grid-area: 1/1;
+  --c1: linear-gradient(
+    90deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  --c2: linear-gradient(
+    0deg,
+    #0000 calc(100% / 3),
+    currentColor 0 calc(2 * 100% / 3),
+    #0000 0
+  );
+  background: var(--c1), var(--c2), var(--c1), var(--c2);
+  background-size: 300% 4px, 4px 300%;
+  background-repeat: no-repeat;
+  animation: l5 1.5s infinite;
+}
+
+.sp-235:after {
+  animation-delay: -0.75s;
+}
+
+.sp-236 {
+  width: 60px;
+  height: 16px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-236:before,
+.sp-236:after {
+  content: "";
+  grid-area: 1/1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l6-1 1.5s infinite linear, l6-2 1.5s infinite linear;
+  transform: scale(var(--s, 1)) translate(3px, -3px);
+}
+
+.sp-236:after {
+  --s: -1;
+}
+
+.sp-237 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  color: var(--primary-color);
+}
+
+.sp-237:before,
+.sp-237:after {
+  content: "";
+  flex: 1;
+  margin: 0 0 0 -2px;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 100% 100%, var(--c) 0 100%,
+    var(--c) 0 50%;
+  background-repeat: no-repeat;
+  animation: l7 1s infinite alternate;
+}
+
+.sp-237:before {
+  transform: scale(-1);
+  margin: 0 -2px 0 0;
+}
+
+.sp-238 {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-238,
+.sp-238:before,
+.sp-238:after {
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l8-1 1.5s infinite cubic-bezier(0, 0, 1, 1), l8-2 1.5s infinite;
+}
+
+.sp-238:before,
+.sp-238:after {
+  content: "";
+  grid-area: 1/1;
+  animation-timing-function: cubic-bezier(0, 0.2, 1, 1), linear;
+}
+
+.sp-238:after {
+  margin: 10px;
+  animation-timing-function: cubic-bezier(0, 0.4, 1, 1), linear;
+}
+
+.sp-239 {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-239,
+.sp-239:before,
+.sp-239:after {
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l9-1 1.5s infinite, l9-2 1.5s infinite;
+}
+
+.sp-239:before,
+.sp-239:after {
+  content: "";
+  grid-area: 1/1;
+  transform: translate(calc(50% - 2px), calc(2px - 50%)) rotate(90deg);
+  animation-delay: -0.25s;
+}
+
+.sp-239:after {
+  transform: translate(calc(2px - 50%), calc(50% - 2px)) rotate(90deg);
+}
+
+.sp-240 {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  color: var(--primary-color);
+}
+
+.sp-240,
+.sp-240:before,
+.sp-240:after {
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation: l10-1 1.5s infinite linear, l10-2 1.5s infinite linear;
+}
+
+.sp-240:before,
+.sp-240:after {
+  content: "";
+  grid-area: 1/1;
+  transform: translate(calc(100% - 4px), calc(4px - 100%)) rotate(90deg);
+}
+
+.sp-240:after {
+  transform: translate(calc(4px - 100%), calc(100% - 4px)) rotate(-90deg);
+}
+
+.sp-261 {
+  height: 9px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t1 1s infinite;
+}
+
+.sp-262 {
+  height: 9px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t2 1s infinite;
+}
+
+.sp-263 {
+  height: 9px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t3 1s infinite;
+}
+
+.sp-264 {
+  height: 15px;
+  width: 60px;
+  --c: repeating-linear-gradient(
+    #0000 0 6px,
+    var(--primary-color) 0 9px,
+    #0000 0 15px
+  );
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 200%;
+  background-repeat: no-repeat;
+  animation: t4 1.5s infinite linear;
+}
+
+.sp-265 {
+  height: 9px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t5 1s infinite;
+}
+
+.sp-266 {
+  height: 9px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t6 1s infinite;
+}
+
+.sp-267 {
+  height: 3px;
+  width: 75px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 21% 100%;
+  background-repeat: no-repeat;
+  animation: t7 1s infinite alternate;
+}
+
+.sp-268 {
+  height: 12px;
+  width: 60px;
+  --c: linear-gradient(var(--primary-color) 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t8 1s infinite;
+}
+
+.sp-269 {
+  height: 6px;
+  width: 60px;
+  --c: repeating-linear-gradient(
+    90deg,
+    var(--primary-color) 0 3px,
+    #0000 0 6px
+  );
+  background: var(--c), var(--c);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  animation: t9 1s infinite;
+}
+
+.sp-270 {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(var(--primary-color) 0 0) right/51% 100% no-repeat;
+  display: flex;
+  animation: t10-0 2s linear infinite;
+}
+
+.sp-270:before,
+.sp-270:after {
+  content: "";
+  width: 15px;
+  background: var(--primary-color);
+  animation: t10-1 2s linear infinite;
+}
+
+.sp-270:after {
+  animation-delay: -1s;
+  --s: -1;
+}
+
+.sp-291 {
+  width: 70px;
+  height: 26px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  --c: radial-gradient(farthest-side, #000 92%, #0000);
+  --s: 18px 18px;
+  -webkit-mask: var(--c) left 4px top 50%, var(--c) center,
+    var(--c) right 4px top 50%, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu1 1.5s infinite;
+}
+
+.sp-292 {
+  width: 70px;
+  height: 26px;
+  background: var(--primary-color);
+  --c: linear-gradient(#000 0 0);
+  --s: 18px 18px;
+  -webkit-mask: var(--c) left 4px top 50%, var(--c) center,
+    var(--c) right 4px top 50%, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu2 1.5s infinite;
+}
+
+.sp-293 {
+  width: 78px;
+  height: calc(27px * 0.866 + 8px);
+  background: var(--primary-color);
+  --c1: conic-gradient(from 150deg at top, #000 60deg, #0000 0);
+  --c2: conic-gradient(from -30deg at bottom, #000 60deg, #0000 0);
+  --s: 27px calc(27px * 0.866);
+  clip-path: polygon(18.1px 0, calc(100% - 18.1px) 0, 100% 100%, 0 100%);
+  -webkit-mask: var(--c1) left 8px top 50%, var(--c2) center,
+    var(--c1) right 8px top 50%, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu3 1.5s infinite;
+}
+
+.sp-294 {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  border-radius: 9px;
+  --c: radial-gradient(farthest-side, #000 92%, #0000);
+  --s: 18px 18px;
+  -webkit-mask: var(--c) left 4px top 4px, var(--c) right 4px top 4px,
+    var(--c) right 4px bottom 4px, var(--c) left 4px bottom 4px,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu4 1.5s infinite;
+}
+
+.sp-295 {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  --c: linear-gradient(#000 0 0);
+  --s: 18px 18px;
+  -webkit-mask: var(--c) left 4px top 4px, var(--c) right 4px top 4px,
+    var(--c) right 4px bottom 4px, var(--c) left 4px bottom 4px,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu5 1.5s infinite;
+}
+
+.sp-296 {
+  width: 74px;
+  height: calc(26px * 0.866 + 6px);
+  display: grid;
+}
+
+.sp-296:before,
+.sp-296:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  --c1: conic-gradient(from 150deg at top, #000 60deg, #0000 0);
+  --c2: conic-gradient(from -30deg at bottom, #000 60deg, #0000 0);
+  --s: 27px calc(27px * 0.866);
+  clip-path: polygon(17px 0, calc(100% - 17px) 0, 100% 100%, 0 100%);
+  -webkit-mask: var(--c1) left 6px top 4px, var(--c2) center,
+    var(--c1) right 6px top 4px, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu6 2s infinite both;
+}
+
+.sp-296:after {
+  transform: rotate(180deg);
+  transform-origin: 50% 99%;
+  animation-delay: 0.5s;
+}
+
+.sp-297 {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  --c: linear-gradient(#000 0 0);
+  --s: 15px 15px;
+  -webkit-mask: var(--c) top, var(--c) right, var(--c) bottom, var(--c) left,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu7 1.5s infinite;
+}
+
+.sp-298 {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  --c: radial-gradient(farthest-side, #000 92%, #0000);
+  --s: 20px 20px;
+  -webkit-mask: var(--c) top -8px left 50%, var(--c) right -8px top 50%,
+    var(--c) bottom -8px left 50%, var(--c) left -8px top 50%,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu8 1.5s infinite;
+}
+
+.sp-299 {
+  width: 50px;
+  height: calc(50px * 0.866);
+  background: var(--primary-color);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  --c: at 50% 66%, #000 60deg, #0000 0;
+  -webkit-mask: conic-gradient(from 30deg var(--c)) right,
+    conic-gradient(from 150deg var(--c)) bottom,
+    conic-gradient(from -90deg var(--c)) left, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu9 1.5s infinite;
+}
+
+.sp-300 {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  -webkit-mask: radial-gradient(
+        circle 31px at 50% calc(100% + 13px),
+        #000 95%,
+        #0000
+      )
+      top 4px left 50%,
+    radial-gradient(circle 31px, #000 95%, #0000) center,
+    radial-gradient(circle 31px at 50% -13px, #000 95%, #0000) bottom 4px left
+      50%,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu10 1.5s infinite;
+}
+
+.sp-301 {
+  width: 100px;
+  height: 30px;
+  display: flex;
+}
+
+.sp-301:before {
+  content: "";
+  background: var(--primary-color);
+  width: 15px;
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: a1 1.5s infinite linear;
+}
+
+.sp-302 {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.sp-302:before,
+.sp-302:after {
+  content: "";
+  background: var(--primary-color);
+  width: 15px;
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: a2 1s infinite linear;
+}
+
+.sp-302:before {
+  transform: scaleX(-1);
+}
+
+.sp-303 {
+  width: 100px;
+  height: 30px;
+  display: flex;
+}
+
+.sp-303:before,
+.sp-303:after {
+  content: "";
+  flex: 1;
+  margin: 0 5px;
+  background: var(--primary-color);
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: a3 0.5s infinite alternate;
+}
+
+.sp-303:after {
+  --s: -1;
+}
+
+.sp-304 {
+  width: 40px;
+  height: 30px;
+  display: grid;
+}
+
+.sp-304:before,
+.sp-304:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: a4 0.5s infinite alternate;
+}
+
+.sp-304:after {
+  --s: -1;
+}
+
+.sp-305 {
+  width: 50px;
+  height: 30px;
+  display: grid;
+  overflow: hidden;
+}
+
+.sp-305:before,
+.sp-305:after {
+  content: "";
+  grid-area: 1/1;
+  background: var(--primary-color);
+  clip-path: polygon(
+    0 10px,
+    calc(100% - 15px) 10px,
+    calc(100% - 15px) 0,
+    100% 50%,
+    calc(100% - 15px) 100%,
+    calc(100% - 15px) calc(100% - 10px),
+    0 calc(100% - 10px)
+  );
+  animation: a5 1s infinite;
+  transform: translate(calc(0% + var(--s, 0%)));
+}
+
+.sp-305:after {
+  --s: -100%;
+}
+
+.sp-306 {
+  width: 50px;
+  height: 60px;
+  display: grid;
+}
+
+.sp-306:before,
+.sp-306:after {
+  content: "";
+  background: linear-gradient(
+        90deg,
+        var(--primary-color) calc(100% - 15px),
+        #0000 0
+      )
+      0 50%/100% 10px,
+    conic-gradient(
+        from -136deg at 15px 50%,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      35px 0/100% 100%;
+  background-repeat: repeat-x;
+  animation: a6 1s infinite;
+}
+
+.sp-306:after {
+  transform: scaleX(-1);
+}
+
+.sp-307 {
+  width: 110px;
+  height: 30px;
+  display: flex;
+  background: linear-gradient(var(--primary-color) 0 0) left / 30px 10px,
+    linear-gradient(var(--primary-color) 0 0) right/30px 10px,
+    conic-gradient(
+        from -136deg at 15px 50%,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      30px 0/100% 100%,
+    conic-gradient(
+        from 44deg at calc(100% - 15px) 50%,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      calc(100% - 30px) 0/100% 100%;
+  background-repeat: no-repeat;
+  animation: a7 0.5s infinite alternate;
+}
+
+.sp-307:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+.sp-308 {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background: linear-gradient(var(--primary-color) 0 0) center/calc(100% - 30px)
+      10px,
+    conic-gradient(
+        from -136deg at right,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      right/15px 100%,
+    conic-gradient(
+        from 44deg at left,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      left / 15px 100%;
+  background-repeat: no-repeat;
+  animation: a8 0.5s infinite alternate;
+}
+
+.sp-308:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+.sp-309 {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  background: linear-gradient(var(--primary-color) 0 0) center/calc(100% - 30px)
+      10px,
+    conic-gradient(
+        from -136deg at right,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      right/15px 100%,
+    conic-gradient(
+        from 44deg at left,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      left / 15px 100%;
+  background-repeat: no-repeat;
+  animation: a9 0.5s infinite linear alternate;
+}
+
+.sp-310 {
+  width: 30px;
+  height: 60px;
+  padding-top: 60px;
+  display: grid;
+  background: linear-gradient(var(--primary-color) 0 0) bottom/10px
+      calc(100% - 15px),
+    conic-gradient(
+        from 134deg at top,
+        #0000,
+        var(--primary-color) 1deg 90deg,
+        #0000 91deg
+      )
+      top/100% 15px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  animation: a10-0 2s infinite;
+}
+
+.sp-310:before,
+.sp-310:after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  background-size: 10px calc(100% - 25px), 100% 25px;
+  animation: a10-1 2s infinite;
+}
+
+.sp-310:after {
+  background-size: 10px calc(100% - 30px), 100% 30px;
+  animation: a10-2 2s infinite;
+}
