@@ -3,9 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Vue 3 Side in</title>
+    <link rel="stylesheet" href="../lib/index.css" />
+    <style>
+      .container {
+        width: 500px;
+        margin: auto;
+      }
+      .container .item {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+        border: solid 1px #f3f3f3;
+        background: #f3f3f3;
+      }
+      .container .item:nth-child(2n) {
+        background: #3e3e3e;
+      }
+      .box {
+        width: 500px;
+        position: relative;
+        z-index: 999;
+      }
+      .common {
+        width: 80%;
+        height: 300px;
+        border: solid 1px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
   </head>
   <body>
-    123
+    <div id="app">
+      <img
+        src=""
+        v-img-lazy="{success:'https://cyc1-save.oss-cn-shanghai.aliyuncs.com/cyc-save/16977657316910.7475541794645779.png', error: 'http://172.18.208.31/img/login-bg.c26ba2fa.jpg'}"
+        alt=""
+      />
+      <div class="container">
+        <div v-for="(item) in list" :key="item" class="item">{{item}}</div>
+        <div @click="list.push(getRandomColor())" class="ref-dom">add</div>
+      </div>
+      <img
+        src=""
+        v-img-lazy="{success:'https://cyc-save.oss-cn-shanghai.aliyuncs.com/cyc-save/16977657316910.7475541794645779.png', error: 'http://172.18.208.31/img/login-bg.c26ba2fa.jpg'}"
+        alt=""
+      />
+    </div>
+    <script>
+      window.process = { env: { NODE_ENV: "production" } };
+    </script>
+    <!-- 引入 Vue 3 核心库 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <!-- <script src="../lib/bundle.browser.js"></script> -->
+    <script src="../lib/bundle.browser.js"></script>
+
+    <script type="module">
+      const { debounceRef, getRandomColor, domImgLazy } = DdCommonPackages;
+      // 创建一个简单的 Vue 应用
+      const app = Vue.createApp({
+        setup() {
+          return {
+            list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          };
+        },
+
+        mounted() {},
+        methods: {},
+      });
+      app.use(domImgLazy);
+
+      // 挂载应用
+      app.mount("#app");
+    </script>
   </body>
 </html>

@@ -3,7 +3,8 @@
 1. vue3 自定义指令
 
    1. dom 出现在视口区域内 `side-in` 渐入效果
-   2. `clickOutside` 点击指定 dom 以外的地方 执行回调
+   2. `click-outside` 点击指定 dom 以外的地方 执行回调
+   3. `img-lazy` 图片懒加载 滑动到视口区域内才会加载 `string｜ { success: string; error?: string; timeout?: number };`
 
 2. vue3 props 的 hooks `usePropsHook`
 
