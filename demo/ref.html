@@ -36,10 +36,11 @@
       <!-- 这里是你的 Vue 应用内容 -->
       <div><input type="text" v-model="kk" /></div>
       <div>-- {{kk}} --</div>
+
+      <div><input type="text" v-model="ff" /></div>
+      <div>--ff {{ff}} --</div>
       <div class="container">
-        <div v-for="(item) in list" v-side-in :key="item" class="item">
-          {{item}}
-        </div>
+        <div v-for="(item) in list" :key="item" class="item">{{item}}</div>
         <div @click="list.push(getRandomColor())" class="ref-dom">add</div>
       </div>
     </div>
@@ -51,15 +52,20 @@
     <!-- <script src="../lib/bundle.browser.js"></script> -->
     <script src="../lib/bundle.browser.js"></script>
     <script type="module">
-      const { debounceRef } = DdCommonPackages;
+      const { debounceRef, getRandomColor } = DdCommonPackages;
       console.log(DdCommonPackages.debounceRef, "DdCommonPackages");
       // 创建一个简单的 Vue 应用
       const app = Vue.createApp({
         setup() {
-          const kk = debounceRef("dddd", 1000);
-          console.log(kk, "kk");
+          const kk = debounceRef("dddd", 10);
+          const ff = Vue.ref("fff");
+          console.log(kk, ff, "kk");
+          Vue.watch(kk.value, () => {
+            console.log("kkk");
+          });
           return {
             kk,
+            ff,
             list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
           };
         },

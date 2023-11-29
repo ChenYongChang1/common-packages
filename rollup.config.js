@@ -71,5 +71,5 @@ module.exports = {
     //   ],
     // }),
   ],
-  external: ["vue"],
+  external: isDev ? [] : ["vue"],
 };
