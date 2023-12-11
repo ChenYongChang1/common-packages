@@ -1,8 +1,10 @@
 import { usePropsHook } from "./props/index";
 import { debounceRef } from "./ref/index";
-export { usePropsHook, debounceRef };
+import { useComponentRef } from "./ref/elm-ref";
+export { usePropsHook, debounceRef, useComponentRef };
 
 export const hooks = {
   usePropsHook,
   debounceRef,
+  useComponentRef,
 };
