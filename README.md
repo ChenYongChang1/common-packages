@@ -16,16 +16,24 @@
    // 这个filterData 可以直接在子组件template里面直接使用
    ```
 
-3. date 相关
+3. `useComponentRef`
+   给组件设置 ref 这个 k 可以找到类型
 
-4. shared
+   ```javascript
+   import QuestionList from "@/components/pages/question/QuestionList.vue";
+   const k = useComponentRef(QuestionList);
+   ```
+
+4. date 相关
+
+5. shared
 
    1. lodash `cloneDeep, debounce, throttle`
    2. 随机数 `getRandomStr 多少位随机数` `getRandomColor 获取随机颜色`
 
-5. tdk
+6. tdk
 
-6. 浏览器相关
+7. 浏览器相关
 
    1. addListener `addEventListener 当页面卸载会自动 移除监听`
    2. mutationObserver `mutationObserver 直接dom.mutationObserver 会监听dom变化`
