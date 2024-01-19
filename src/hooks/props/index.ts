@@ -78,7 +78,7 @@ function _usePropsHook<T extends IAnyObj, K extends string & keyof T>(
     const oldVal = toRaw(props[key]);
     const newProxyData = new Proxy(props[key], {
       get(target, k, receiver) {
-        // const obj = toRaw(oldVal)
+        // const obj = toRaw(oldVal) 222
         // const copyNeedObj = changeObj.get(props[key])
 
         // const newObj = toRaw(copyNeedObj || oldVal) as any
