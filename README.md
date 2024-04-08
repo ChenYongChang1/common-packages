@@ -30,11 +30,10 @@
 
     1.  lodash `cloneDeep, debounce, throttle`
     2.  随机数 `getRandomStr 多少位随机数` `getRandomColor 获取随机颜色`
-    3.  extends `manyMixins` 提供多继承
+    3.  extends `ClassExtends` 提供多继承
 
         ```js
-        const D = manyMixins(B, C, E);
-        const d = new D([], [], ["d"]);
+        const d = new ClassExtends(B, C);
         ```
 
 6.  tdk

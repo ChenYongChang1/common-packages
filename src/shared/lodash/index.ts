@@ -1,1 +1,1 @@
-export { cloneDeep, debounce, throttle } from "lodash-es";
+export { cloneDeep, debounce, throttle, assignIn } from "lodash-es";

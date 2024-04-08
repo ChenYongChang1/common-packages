@@ -1,27 +1,29 @@
-type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
-  k: infer I
-) => void
-  ? I
-  : never;
+import { assignIn } from "../lodash";
+type FunctionConstructor<T> = new (...args: any[]) => T;
 
-export function manyMixins<
-  T extends { new (...args: any[]): {} },
-  K extends { new (...args: any[]): {} }[]
->(Base: T, ...Compare: K) {
-  return class {
-    constructor(...args: any[]) {
-      const base = new Base(...(args[0] || []));
-      Object.assign(this, base);
-      for (const CIndex in Compare) {
-        const C = Compare[CIndex];
+export function ClassExtends<B, C>(
+  BClass: FunctionConstructor<B>,
+  CClass: FunctionConstructor<C>
+): FunctionConstructor<C & B>;
 
-        const c = new C(...(args[Number(CIndex) + 1] || []));
-        Object.assign(this, c);
-      }
-      (this as any).__proto__ = Base.prototype;
-    }
-  } as {
-    new (...args: any[]): InstanceType<T> &
-      UnionToIntersection<InstanceType<K[number]>>;
-  };
+export function ClassExtends<B, C>(
+  BClass: FunctionConstructor<B>,
+  CClass: FunctionConstructor<C>
+): FunctionConstructor<C & B> {
+  const b = new BClass();
+  let newProto = Object.create(null);
+  const CClasses = [CClass];
+  assignIn(newProto, BClass.prototype);
+  CClasses.forEach((cls) => {
+    assignIn(newProto, cls.prototype);
+  });
+  const base = Object.create(newProto); // newProto
+  assignIn(base, b);
+  CClasses.forEach((cls) => {
+    const c = new cls();
+    assignIn(base, c);
+  });
+  return function () {
+    return base;
+  } as any;
 }
