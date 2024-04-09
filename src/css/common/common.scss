@@ -1,0 +1,194 @@
+.dd-overflow-hidden {
+  overflow: hidden;
+}
+.dd-width-100 {
+  width: 100%;
+}
+.dd-height-100 {
+  height: 100%;
+}
+.dd-width-50 {
+  width: 50%;
+}
+/* ==============================  flex 相关 ============================== */
+.dd-flex {
+  display: flex;
+}
+
+.dd-flex-1 {
+  flex: 1;
+}
+.dd-flex-2 {
+  flex: 2;
+}
+
+.dd-justify-start {
+  justify-content: flex-start;
+}
+
+.dd-justify-end {
+  justify-content: flex-end;
+}
+
+.dd-justify-center {
+  justify-content: center;
+}
+
+.dd-justify-between {
+  justify-content: space-between;
+}
+
+.dd-justify-around {
+  justify-content: space-around;
+}
+
+.dd-items-start {
+  align-items: flex-start;
+}
+
+.dd-items-end {
+  align-items: flex-end;
+}
+
+.dd-items-center {
+  align-items: center;
+}
+
+.dd-items-baseline {
+  align-items: baseline;
+}
+
+.dd-items-stretch {
+  align-items: stretch;
+}
+
+.dd-flex-row {
+  flex-direction: row;
+}
+
+.dd-flex-column {
+  flex-direction: column;
+}
+
+.dd-flex-warp {
+  flex-wrap: wrap;
+}
+
+.dd-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.dd-flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.dd-flex-column-reverse {
+  flex-direction: column-reverse;
+}
+/* ==============================  flex 相关 end ============================== */
+
+/* ==============================  text 相关 ============================== */
+$text-szie: (12, 30);
+$text-font: (4, 7);
+
+@for $size from nth($text-szie, 1) through nth($text-szie, 2) {
+  .dd-text-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+@for $font from nth($text-font, 1) through nth($text-font, 2) {
+  .dd-font-#{$font}00 {
+    font-weight: #{$font}00;
+  }
+}
+
+.dd-text-nowrap {
+  white-space: nowrap;
+}
+
+.dd-text-center {
+  text-align: center;
+}
+
+.dd-text-left {
+  text-align: left;
+}
+
+.dd-text-right {
+  text-align: right;
+}
+
+.dd-break-all {
+  word-break: break-all;
+}
+
+.dd-break-word {
+  word-break: break-word;
+}
+
+.dd-ellipsis {
+  overflow: hidden;
+  word-break: break-all;
+
+  &-1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/* ==============================  text 相关 end ============================== */
+
+/* ==============================  position 相关 ============================== */
+
+.dd-relative {
+  position: relative;
+}
+
+.dd-absolute {
+  position: absolute;
+}
+
+.dd-fixed {
+  position: fixed;
+}
+.dd-sticky {
+  position: sticky;
+}
+
+/* ==============================  position 相关 end ============================== */
+
+/* ==============================  margin / padding 相关 ============================== */
+
+.dd-margin-auto {
+  margin: auto;
+}
+
+.dd-margin-0 {
+  margin: 0;
+}
+
+.dd-padding-0 {
+  padding: 0;
+}
+/* ==============================  margin / padding 相关 end ============================== */
+
+/* ==============================  grid 相关 ============================== */
+.dd-grid {
+  display: grid;
+}
+
+.dd-grid-1 {
+  grid-template-columns: 1fr;
+}
+.dd-grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.dd-grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/* ==============================  grid 相关 end ============================== */

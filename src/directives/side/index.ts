@@ -14,17 +14,22 @@ interface IDirectiveOption {
 }
 
 const weak = new WeakMap<HTMLElement, Animation>();
-const ob = new IntersectionObserver((entries) => {
-  for (const elm of entries) {
-    if (elm.isIntersecting) {
-      const animate = weak.get(elm.target as HTMLElement);
-      if (animate) {
-        animate.play();
-        ob.unobserve(elm.target);
+
+let ob: any = null;
+
+if (typeof window) {
+  ob = new IntersectionObserver((entries) => {
+    for (const elm of entries) {
+      if (elm.isIntersecting) {
+        const animate = weak.get(elm.target as HTMLElement);
+        if (animate) {
+          animate.play();
+          ob!.unobserve(elm.target);
+        }
       }
     }
-  }
-});
+  });
+}
 
 const isBeforeOutView = (el: HTMLElement, distance: number) => {
   const rect = el.getBoundingClientRect();
@@ -57,11 +62,11 @@ export const _domSideIn: Directive<any, IDirectiveOption> = {
     );
 
     animate.pause();
-    ob.observe(el);
+    ob!.observe(el);
     weak.set(el, animate);
   },
   unmounted(el: HTMLElement) {
-    ob.unobserve(el);
+    ob!.unobserve(el);
   },
 };
 
